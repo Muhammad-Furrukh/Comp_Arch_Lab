@@ -5,10 +5,14 @@ parameter BAUD_DIVISOR = 868;
 parameter INIT = 3'b000, FIFO_LOAD = 3'b001, READY = 3'b010, TX_START = 3'b011, 
 CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
 
+// Data Lines
 logic [7:0] data, fifo_data;
 logic [13:0] baud_divisor_r, baud_count;
 logic fifo_load, parity_bit, shift_en, load_en, Tx_sel, bit_count, Odd_parity_r, count_en,
 Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status;
 
+// Registers
+logic [8:0] Shift_Reg;
+logic [7:0] Data_Reg, Tx_FIFO;
 
 endmodule

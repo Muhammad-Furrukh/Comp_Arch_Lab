@@ -142,4 +142,27 @@ always_comb begin
   endcase
 end
 
+// Data Register
+always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+      Data_Reg <= 8'h00;
+    else
+      Data_Reg <= raw_data;
+end
+
+// Transmission FIFO
+always_ff @(posedge clk or negedge rst_n) begin
+    if ((!rst_n) || load_en)
+      Tx_FIFO <= 8'h00;
+    else if (fifo_load)
+      Tx_FIFO <= data;
+end
+
+// FIFO Status Register
+always_ff @(posedge clk or negedge rst_n) begin
+    if ((!rst_n) || load_en)
+      FIFO_EMPTY <= 1;
+    else if (fifo_load)
+      FIFO_EMPTY <= 0;
+end
 endmodule

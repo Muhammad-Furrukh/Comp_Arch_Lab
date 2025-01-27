@@ -78,4 +78,38 @@ always_comb begin
   endcase
 end
 
+// Controller Output Logic
+always_comb begin
+  case(c_state)
+    INIT: begin
+        if (fifo_status) begin
+            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+        end
+        else begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+        end
+    end
+    FIFO_LOAD: begin
+        if (Tx_status) begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+        end
+        else begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 1; Tx_sel = 0;
+        end
+    end
+    READY: begin
+        if (Tx_en_r) begin
+            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1;
+        end
+        else begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+        end
+    end
+    TX_START:
+    CHANGE_BIT:
+    CONT_BIT:
+    default:
+  endcase
+end
+
 endmodule

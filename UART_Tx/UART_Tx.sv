@@ -5,11 +5,11 @@ parameter BAUD_DIVISOR = 868;
 parameter INIT = 3'b000, FIFO_LOAD = 3'b001, READY = 3'b010, TX_START = 3'b011, 
 CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
 
-// Data Lines
+// Signal Lines
 logic [7:0] data, fifo_data;
 logic [13:0] baud_divisor_r, baud_count;
 logic fifo_load, parity_bit, shift_en, load_en, Tx_sel, bit_count, Odd_parity_r, count_en,
-Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status;
+Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status, shift_rst;
 
 logic [2:0] c_state, n_state;
 
@@ -83,39 +83,62 @@ always_comb begin
   case(c_state)
     INIT: begin
         if (fifo_status) begin
-            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
     end
     FIFO_LOAD: begin
         if (Tx_status) begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 1; Tx_sel = 0;
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 1; Tx_sel = 0; shift_rst = 0;
         end
     end
     READY: begin
         if (Tx_en_r) begin
-            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1;
+            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; shift_rst = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
     end
     TX_START: begin
         if (baud_eq) begin
-            fifo_load = 0; count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 0;
+            fifo_load = 0; count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
         else begin
-            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 0;
+            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
         end
     end
-    CHANGE_BIT:
-    CONT_BIT:
-    default:
+    CHANGE_BIT: begin
+        if (bit_eq && fifo_status) begin
+            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        end
+        else if (bit_eq && (!fifo_status)) begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        end
+        else begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+        end
+    end
+    CONT_BIT: begin
+        if (bit_eq && fifo_status) begin
+            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        end
+        else if (bit_eq && (!fifo_status)) begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        end
+        else if ((!bit_eq) && baud_eq) begin
+            fifo_load = 0; count_en = 0; shift_en = 1; load_en = 0; Tx_sel = 0; shift_rst = 0;
+        end
+        else begin
+            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+        end
+    end
+    default: fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
   endcase
 end
 

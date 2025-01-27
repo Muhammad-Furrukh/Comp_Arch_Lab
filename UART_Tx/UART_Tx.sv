@@ -105,7 +105,14 @@ always_comb begin
             fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0;
         end
     end
-    TX_START:
+    TX_START: begin
+        if (baud_eq) begin
+            fifo_load = 0; count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 0;
+        end
+        else begin
+            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 0;
+        end
+    end
     CHANGE_BIT:
     CONT_BIT:
     default:

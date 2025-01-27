@@ -9,4 +9,6 @@ logic [7:0] data, fifo_data;
 logic [13:0] baud_divisor_r, baud_count;
 logic fifo_load, parity_bit, shift_en, load_en, Tx_sel, bit_count, Odd_parity_r, count_en,
 Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status;
+
+
 endmodule

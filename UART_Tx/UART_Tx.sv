@@ -165,4 +165,14 @@ always_ff @(posedge clk or negedge rst_n) begin
     else if (fifo_load)
       FIFO_EMPTY <= 0;
 end
+
+// Shift Register
+
+always_comb begin
+    // Parity Generator
+    case(Odd_parity_r)
+      1'b0: parity_bit = ^fifo_data;
+      1'b1: parity_bit = ~(^fifo_data);
+    endcase
+end
 endmodule

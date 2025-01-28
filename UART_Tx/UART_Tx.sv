@@ -9,7 +9,7 @@ CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
 logic [7:0] data, fifo_data;
 logic [13:0] baud_divisor_r, baud_count;
 logic fifo_load, parity_bit, shift_en, load_en, Tx_sel, bit_count, Odd_parity_r, count_en,
-Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status, shift_rst;
+Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status, shift_rst, serial_out;
 
 logic [2:0] c_state, n_state;
 
@@ -166,12 +166,24 @@ always_ff @(posedge clk or negedge rst_n) begin
       FIFO_EMPTY <= 0;
 end
 
-// Shift Register Sequential logic
+// Shift Register
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || shift_rst)
       Shift_Reg <= 11'b11111111110;
-    else if (shift_en)
+    else if (shift_en && (!load_en))
       Shift_Reg <= (Shift_Reg>>1) 
+    else if (load_en)
+      Shift[0] = 1'b0;
+      Shift[1] = fifo_data[0];
+      Shift[2] = fifo_data[1];
+      Shift[3] = fifo_data[2];
+      Shift[4] = fifo_data[3];
+      Shift[5] = fifo_data[4];
+      Shift[6] = fifo_data[5];
+      Shift[7] = fifo_data[6];
+      Shift[8] = fifo_data[7];
+      Shift[9] = parity_bit;
+      Shift[10] = 1'b1;
 end
 
 always_comb begin

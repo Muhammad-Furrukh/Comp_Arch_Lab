@@ -1,0 +1,36 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.1/examples
+vUART_Tx
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1738039428
+!i10b 1
+!s100 1L@;5<184fCEgAP^gc1TD2
+I0b8E^b04FR7[YB=SRDZiF1
+S1
+dC:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/Simulation
+w1738039352
+8C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv
+FC:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv
+!i122 1
+L0 1 272
+VDg1SIo80bB@j0V0VzS_@n1
+OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1738039428.000000
+!s107 C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv|
+!i113 0
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
+n@u@a@r@t_@tx

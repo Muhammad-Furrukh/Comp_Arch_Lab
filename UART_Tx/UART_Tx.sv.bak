@@ -24,9 +24,9 @@ logic FIFO_EMPTY;
 // Controller State Register
 always_ff @(posedge clk or negedge rst_n) begin
   if (!rst_n)
-    begin c_state <= INIT; end
+    c_state <= INIT;
   else
-    begin c_state <= n_state; end
+    c_state <= n_state; 
 end
 
 // Controller next state logic
@@ -34,45 +34,45 @@ always_comb begin
   case(c_state)
     INIT: begin 
         if (fifo_status)
-          begin n_state = FIFO_LOAD; end
+          n_state = FIFO_LOAD;
         else
-          begin n_state = INIT; end
+          n_state = INIT;
     end
     FIFO_LOAD: begin
         if (Tx_status)
-          begin n_state = FIFO_LOAD; end
+          n_state = FIFO_LOAD;
         else 
-          begin n_state = READY; end
+          n_state = READY;
     end
     READY: begin
         if (Tx_en_r)
-          begin n_state = TX_START; end
+          n_state = TX_START;
         else
-          begin n_state = READY; end
+          n_state = READY;
     end
     TX_START: begin
         if (baud_eq)
-          begin n_state = CHANGE_BIT; end
+          n_state = CHANGE_BIT;
         else
-          begin n_state = TX_START; end
+          n_state = TX_START;
     end
     CHANGE_BIT: begin
         if (bit_eq && fifo_status)
-          begin n_state = FIFO_LOAD; end
+          n_state = FIFO_LOAD;
         else if (bit_eq && (!fifo_status))
-          begin n_state = INIT; end
+          n_state = INIT;
         else
-          begin n_state = CONT_BIT; end
+          n_state = CONT_BIT;
     end
     CONT_BIT: begin
         if (bit_eq && fifo_status)
-          begin n_state = FIFO_LOAD; end
+          n_state = FIFO_LOAD;
         else if (bit_eq && (!fifo_status))
-          begin n_state = INIT; end
+          n_state = INIT;
         else if ((!bit_eq) && baud_eq)
-          begin n_state = CHANGE_BIT; end
+          n_state = CHANGE_BIT;
         else
-          begin n_state = CONT_BIT; end
+          n_state = CONT_BIT;
     end
     default: n_state = INIT;
   endcase
@@ -145,33 +145,33 @@ end
 // Data Register
 always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n)
-      begin Data_Reg <= 8'h00; end
+      Data_Reg <= 8'h00;
     else
-      begin Data_Reg <= raw_data; end
+      Data_Reg <= raw_data;
 end
 
 // Transmission FIFO
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || load_en)
-      begin Tx_FIFO <= 8'h00; end
+      Tx_FIFO <= 8'h00;
     else if (fifo_load)
-      begin Tx_FIFO <= data; end
+      Tx_FIFO <= data;
 end
 
 // FIFO Status Register
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || load_en)
-      begin FIFO_EMPTY <= 1; end
+      FIFO_EMPTY <= 1;
     else if (fifo_load)
-      begin FIFO_EMPTY <= 0; end
+      FIFO_EMPTY <= 0;
 end
 
 // Shift Register
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || shift_rst)
-      begin Shift_Reg <= 11'b11111111110; end
+      Shift_Reg <= 11'b11111111110;
     else if (shift_en && (!load_en))
-      begin Shift_Reg <= (Shift_Reg>>1); end
+      Shift_Reg <= (Shift_Reg>>1) 
     else if (load_en) begin
       Shift_Reg[0] <= 1'b0;
       Shift_Reg[1] <= fifo_data[0];
@@ -190,7 +190,7 @@ end
 // Control Register
 always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n)
-      begin Control_Reg <= 3'b000; end
+      Control_Reg <= 3'b000;
     else if (!Tx_sel) begin
         Control_Reg[0] <= Tx_en;
         Control_Reg[1] <= Two_stop;
@@ -202,26 +202,26 @@ end
 // Baud Divisor Register
 always_ff @(posedge clk or negedge rst_n) begin
     if (!rst_n)
-      begin Baud_Reg = 867; end // Default Baudrate of 115200
+      Baud_Reg = 867; // Default Baudrate of 115200
     else if (!Tx_sel)
       // Baud_Reg = baud_divisor;
-      begin Baud_Reg = 867; end
+      Baud_Reg = 867;
 end
 
 // Baud Counter
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || baud_eq)
-      begin Baud_Counter = 14'b00000000000000; end
+      Baud_Counter = 14'b00000000000000;
     else if (count_en)
-      begin Baud_Counter = Baud_Counter + 1; end
+      Baud_Counter = Baud_Counter + 1;
 end
 
 // Bit Counter
 always_ff @(posedge clk or negedge rst_n) begin
     if ((!rst_n) || bit_eq)
-      begin Bit_Counter = 4'h0; end
+      Bit_Counter = 4'h0;
     else if (baud_eq)
-      begin Bit_Counter = Bit_Counter + 1; end
+      Bit_Counter = Bit_Counter + 1;
 end
 
 always_comb begin
@@ -262,9 +262,9 @@ always_comb begin
 
     // Bit equal to comparator
     if (Two_stop_r)
-      begin bit_eq = (bit_count == 12); end
+      bit_eq = (bit_count == 12);
     else
-      begin bit_eq = (bit_count == 11); end
+      bit_eq = (bit_count == 11);
 
     Tx_status = (bit_count != 0);
 

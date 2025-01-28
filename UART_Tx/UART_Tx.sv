@@ -173,17 +173,29 @@ always_ff @(posedge clk or negedge rst_n) begin
     else if (shift_en && (!load_en))
       Shift_Reg <= (Shift_Reg>>1) 
     else if (load_en)
-      Shift[0] = 1'b0;
-      Shift[1] = fifo_data[0];
-      Shift[2] = fifo_data[1];
-      Shift[3] = fifo_data[2];
-      Shift[4] = fifo_data[3];
-      Shift[5] = fifo_data[4];
-      Shift[6] = fifo_data[5];
-      Shift[7] = fifo_data[6];
-      Shift[8] = fifo_data[7];
-      Shift[9] = parity_bit;
-      Shift[10] = 1'b1;
+      Shift_Reg[0] <= 1'b0;
+      Shift_Reg[1] <= fifo_data[0];
+      Shift_Reg[2] <= fifo_data[1];
+      Shift_Reg[3] <= fifo_data[2];
+      Shift_Reg[4] <= fifo_data[3];
+      Shift_Reg[5] <= fifo_data[4];
+      Shift_Reg[6] <= fifo_data[5];
+      Shift_Reg[7] <= fifo_data[6];
+      Shift_Reg[8] <= fifo_data[7];
+      Shift_Reg[9] <= parity_bit;
+      Shift_Reg[10] <= 1'b1;
+end
+
+// Control Register
+always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+      Control_Reg <= 3'b000;
+    else if (!Tx_sel) begin
+        Control_Reg[0] <= Tx_en;
+        Control_Reg[1] <= Two_stop;
+        Control_Reg[2] <= Odd_parity;
+    end
+      
 end
 
 always_comb begin
@@ -192,5 +204,16 @@ always_comb begin
       1'b0: parity_bit = ^fifo_data;
       1'b1: parity_bit = ~(^fifo_data);
     endcase
+
+    serial_out = Shift_Reg[0];
+    fifo_status = FIFO_EMPTY;
+    fifo_data = Tx_FIFO;
+
+    // Control Register outputs
+    Tx_en_r = Control_Reg[0];
+    Two_stop_r = Control_Reg[1];
+    Odd_parity_r = Control_Reg[2];
+
+    
 end
 endmodule

@@ -15,7 +15,7 @@ logic [2:0] c_state, n_state;
 
 // Registers
 logic [13:0] Baud_Reg, Baud_Counter;
-logic [8:0] Shift_Reg;
+logic [10:0] Shift_Reg;
 logic [7:0] Data_Reg, Tx_FIFO;
 logic [3:0] Bit_Counter;
 logic [2:0] Control_Reg;
@@ -166,7 +166,13 @@ always_ff @(posedge clk or negedge rst_n) begin
       FIFO_EMPTY <= 0;
 end
 
-// Shift Register
+// Shift Register Sequential logic
+always_ff @(posedge clk or negedge rst_n) begin
+    if ((!rst_n) || shift_rst)
+      Shift_Reg <= 11'b11111111110;
+    else if (shift_en)
+      Shift_Reg <= (Shift_Reg>>1) 
+end
 
 always_comb begin
     // Parity Generator

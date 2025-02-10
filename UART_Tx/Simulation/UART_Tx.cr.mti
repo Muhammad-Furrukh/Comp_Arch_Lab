@@ -1,1 +1,9 @@
+{C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_Tx
+** Warning: C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv(235): (vlog-2182) 'Odd_parity_r' might be read before written in always_comb or always @* block.
 
+Top level modules:
+	UART_Tx
+
+} {} {}}

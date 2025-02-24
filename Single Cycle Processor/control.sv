@@ -1,4 +1,4 @@
-`include "header.sv"
+import header_pkg::*;
 
 module control(
 input logic [6:0] op_code, [2:0] func3, [6:0] func7,
@@ -44,7 +44,7 @@ always_comb begin
   end
   //Signals for AUIPC
   else if (op_code == 23) begin
-    reg_wr = 1'b1; rd_en = 1'b0; wr_en = 1'b0; u = 1'b1; sel_A = 1'b1; 
+    reg_wr = 1'b1; rd_en = 1'b0; wr_en = 1'b0; u = 1'b1; sel_A = 1'b0; 
     sel_B = 1'b1; jump = 1'b0; size = 3'b011; br_type = 3'b111; wb_sel = 2'b00;
   end
   //Signals for LUI
@@ -100,9 +100,9 @@ always_comb begin
     //I type Load instructions
     7'h03: begin
       case(func3)
-        3'h0: begin alu_op = ALU_ADD; size = 3'b001; end
-        3'h1: begin alu_op = ALU_ADD; size = 3'b010; end
-        3'h2: begin alu_op = ALU_ADD; size = 3'b011; end
+        3'h0: begin alu_op = ALU_ADD; size = 3'b000; end
+        3'h1: begin alu_op = ALU_ADD; size = 3'b001; end
+        3'h2: begin alu_op = ALU_ADD; size = 3'b010; end
         3'h4: begin alu_op = ALU_ADD; size = 3'b100; end
         3'h5: begin alu_op = ALU_ADD; size = 3'b101; end
       endcase
@@ -112,9 +112,9 @@ always_comb begin
     //Store instructions
     7'h23: begin
       case(func3)
-        3'h0: begin alu_op = ALU_ADD; size = 3'b001; end
-        3'h1: begin alu_op = ALU_ADD; size = 3'b010; end
-        3'h2: begin alu_op = ALU_ADD; size = 3'b011; end
+        3'h0: begin alu_op = ALU_ADD; size = 3'b000; end
+        3'h1: begin alu_op = ALU_ADD; size = 3'b001; end
+        3'h2: begin alu_op = ALU_ADD; size = 3'b010; end
       endcase
     end
     //Branch instructions

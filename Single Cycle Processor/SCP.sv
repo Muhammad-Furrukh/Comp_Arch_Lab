@@ -1,4 +1,4 @@
-`include "header.sv"
+import header_pkg::*;
 
 module SCP(
   input logic clk, reset, 

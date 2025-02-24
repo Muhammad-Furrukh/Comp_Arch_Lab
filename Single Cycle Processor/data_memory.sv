@@ -4,8 +4,10 @@ module data_memory(
 );
 logic [7:0] mem [255:0];
 logic [31:0] addr_data;
+logic [31:0] addr_off;
 always_comb begin
-  addr_data = {mem[addr + 3], mem[addr + 2], mem[addr + 1], mem[addr]};
+  addr_off = addr - 32'h80000000;
+  addr_data = {mem[addr_off + 3], mem[addr_off + 2], mem[addr_off + 1], mem[addr_off]};
   if (rd_en) begin
     rdata = addr_data;
   end
@@ -20,18 +22,17 @@ always_ff @(negedge clk) begin
   end
   else if (wr_en) begin
     case(size)
-      3'b000: mem [addr] <= wdata [7:0];
+      3'b000: mem [addr_off] <= wdata [7:0];
       3'b001: begin
-             mem [addr] <= wdata [7:0];
-             mem [addr + 1] <= wdata [15:8];
+             mem [addr_off] <= wdata [7:0];
+             mem [addr_off + 1] <= wdata [15:8];
       end
       3'b010: begin
-             mem [addr] <= wdata [7:0];
-             mem [addr + 1] <= wdata [15:8];
-             mem [addr + 2] <= wdata [23:16];
-             mem [addr + 3] <= wdata [31:24];
+             mem [addr_off] <= wdata [7:0];
+             mem [addr_off + 1] <= wdata [15:8];
+             mem [addr_off + 2] <= wdata [23:16];
+             mem [addr_off + 3] <= wdata [31:24];
       end
-      default: ;
     endcase
   end
 end

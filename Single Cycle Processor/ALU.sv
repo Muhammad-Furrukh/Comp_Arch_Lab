@@ -1,4 +1,4 @@
-`include "header.sv"
+import header_pkg::*;
 
 module ALU(
     input alu_ops_t alu_op, 
@@ -32,6 +32,7 @@ always_comb begin
     ALU_SRA: out = A >>> B[4:0];
     ALU_SLTU: out = (uA < uB)? 32'b1: 32'b0; 
     ALU_LUI: out = B;
+    default: out = 32'b0;
   endcase
 end
 endmodule

@@ -1,4 +1,4 @@
-`include "header.sv"
+import header_pkg::*;
 
 module tb();
 logic clk, reset, reg_wr, u, sel_A, sel_B, wr_en, rd_en, jump, br_taken;

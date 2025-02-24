@@ -1,6 +1,5 @@
-`ifndef HEADER_SV
-`define HEADER_SV
-typedef enum logic [3:0] {
+package header_pkg;
+    typedef enum logic [3:0] {
         ALU_ADD  = 4'b0000,
         ALU_SUB  = 4'b0001,
         ALU_AND  = 4'b0010,
@@ -13,4 +12,4 @@ typedef enum logic [3:0] {
         ALU_SLTU = 4'b1001,
         ALU_LUI = 4'b1010
     } alu_ops_t;
-`endif
+endpackage

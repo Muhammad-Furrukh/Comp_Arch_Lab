@@ -7,7 +7,7 @@ logic [31:0] x0 = 32'b0;
 int i;
 always_ff @(negedge clk) begin
     if (reset) begin
-      registers <= '{ 31{32'b0} };
+      registers <= '{ 31{32'bx} };
     end
     else if (reg_wr) begin
       registers[waddr - 1] <= wdata;

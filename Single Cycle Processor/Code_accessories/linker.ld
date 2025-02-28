@@ -4,7 +4,7 @@ ENTRY( reset_handler )
 MEMORY
 { 
   FLASH (rx)  : ORIGIN = 0x00000000, LENGTH = 1K
-  RAM   (rwx) : ORIGIN = 0x80000000, LENGTH = 1K
+  RAM   (rwx) : ORIGIN = 0x80000000, LENGTH = 256
 }
 
 
@@ -26,19 +26,13 @@ SECTIONS
 
   . = ALIGN(4);
 
-  PROVIDE (__etext = .);
-  PROVIDE (_etext = .);
-  PROVIDE (etext = .);
-
   _sidata = .;
   .data : AT( _sidata )
   {
-    _sdata = .;
     *(.rdata) 
     *(.data .data.*)
     *(.sdata .sdata.*)
     . = ALIGN(4);
-    _edata = .;
   } >RAM
 
   PROVIDE( _edata = . );
@@ -48,17 +42,14 @@ SECTIONS
 
   .bss :
   {
-    _sbss = .;
     *(.sbss*)
     *(.bss .bss.*)
     *(COMMON)
     . = ALIGN(4);
-    _ebss = .;
   } >RAM
 
   . = ALIGN(8);
-  PROVIDE( _end = . );
-  PROVIDE( end = . );
+  
 
   .stack ORIGIN(RAM) + LENGTH(RAM) - __stack_size :
   {

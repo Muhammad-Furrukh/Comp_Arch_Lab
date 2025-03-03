@@ -1,6 +1,6 @@
 import header_pkg::*;
 
-module control(
+module control_DE(
 input logic [6:0] op_code, [2:0] func3, [6:0] func7,
 output logic reg_wr, rd_en, wr_en, u, sel_A, sel_B, jump, [2:0] size, br_type, [1:0] wb_sel,
 output alu_ops_t alu_op);

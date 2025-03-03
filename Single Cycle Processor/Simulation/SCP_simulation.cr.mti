@@ -107,6 +107,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	--none--
 
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_memory
+
+Top level modules:
+	data_memory
+
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling package ALU_sv_unit
@@ -115,6 +122,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 
 Top level modules:
 	ALU
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module register_file
+
+Top level modules:
+	register_file
 
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021

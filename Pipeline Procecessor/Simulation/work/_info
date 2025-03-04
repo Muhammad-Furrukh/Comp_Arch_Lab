@@ -1,0 +1,517 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.1/examples
+T_opt
+!s110 1741052493
+Vc7U@eVBZ1Q>MEzUmV[=NY1
+04 2 4 work tb fast 0
+=13-745d2227d577-67c65a4d-109-bfc
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vALU
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 DXx4 work 10 header_pkg 0 22 aLPfh7GRXnLGTc]bPeDQE3
+DXx4 work 11 ALU_sv_unit 0 22 Tg7AWi==SKXH<ZEQWOCDf1
+Z4 !s110 1741052482
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 5ck:nMoVR77Tj:gNe^ak;1
+I8zF9Y8A@1K40Az^]lUdQb1
+!s105 ALU_sv_unit
+S1
+Z6 dC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/Simulation
+Z7 w1739827336
+Z8 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
+Z9 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
+!i122 261
+L0 3 36
+Z10 OL;L;2021.1;73
+31
+Z11 !s108 1741052482.000000
+Z12 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
+!i113 0
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@u
+XALU_sv_unit
+R2
+R3
+R4
+VTg7AWi==SKXH<ZEQWOCDf1
+r1
+!s85 0
+!i10b 1
+!s100 OI@9J>PiLM:hQ@jLlXSRf1
+ITg7AWi==SKXH<ZEQWOCDf1
+!i103 1
+S1
+R6
+R7
+R8
+R9
+!i122 261
+Z15 L0 1 0
+R10
+31
+R11
+R12
+R13
+!i113 0
+R14
+R1
+n@a@l@u_sv_unit
+vbranch_cond
+R2
+R4
+!i10b 1
+!s100 cB9Z1dBCn3fb3:W9aPObS3
+IBc?ol`1`=n2b9jk6eOPKi2
+S1
+R6
+w1722365974
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv
+!i122 262
+L0 1 56
+R5
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv|
+!i113 0
+R14
+R1
+vcontrol_DE
+R2
+R3
+DXx4 work 18 control_DE_sv_unit 0 22 >b3?=CJQnUgQZ^FWVQke>0
+R4
+R5
+r1
+!s85 0
+!i10b 1
+!s100 @fFaE@zi6H`AZQHgcG_GG0
+IicU_<DUc<XRk`5T?><ani3
+!s105 control_DE_sv_unit
+S1
+R6
+Z16 w1741038931
+Z17 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
+Z18 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
+!i122 263
+L0 3 136
+R10
+31
+R11
+Z19 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
+!i113 0
+R14
+R1
+ncontrol_@d@e
+Xcontrol_DE_sv_unit
+R2
+R3
+R4
+V>b3?=CJQnUgQZ^FWVQke>0
+r1
+!s85 0
+!i10b 1
+!s100 @ookGc2KS6:fGcd2L<B7H3
+I>b3?=CJQnUgQZ^FWVQke>0
+!i103 1
+S1
+R6
+R16
+R17
+R18
+!i122 263
+R15
+R10
+31
+R11
+R19
+R20
+!i113 0
+R14
+R1
+ncontrol_@d@e_sv_unit
+vcontrol_MV
+R2
+!s110 1741045207
+!i10b 1
+!s100 zTM9g9N:AEX@RzEY<^G]H0
+IIXBdT?^@B37^iQjoTJg<G0
+S1
+R6
+w1741039391
+Z21 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv
+Z22 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv
+!i122 68
+Z23 L0 1 21
+R5
+R10
+r1
+!s85 0
+31
+!s108 1741045207.000000
+Z24 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv|
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv|
+!i113 0
+R14
+R1
+ncontrol_@m@v
+vcontrol_MW
+R2
+Z26 !s110 1741052483
+!i10b 1
+!s100 7aA:aK]ogGnlPmTNNQk3;2
+IfCFTAKOQ1eiC6iSzUXUn^3
+S1
+R6
+w1741045285
+R21
+R22
+!i122 264
+R23
+R5
+R10
+r1
+!s85 0
+31
+R11
+R24
+R25
+!i113 0
+R14
+R1
+ncontrol_@m@w
+vdata_memory
+R2
+R26
+!i10b 1
+!s100 Kn8HohdX?QdG_<0mQDjoS0
+IBLdBl1JnP98DG<<YQOH5z2
+S1
+R6
+w1741046493
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv
+!i122 265
+L0 1 39
+R5
+R10
+r1
+!s85 0
+31
+Z27 !s108 1741052483.000000
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv|
+!i113 0
+R14
+R1
+Xheader_pkg
+R2
+R26
+!i10b 1
+!s100 ngGaW2UMl@fMECR_f@B6m3
+IaLPfh7GRXnLGTc]bPeDQE3
+S1
+R6
+w1739827284
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv
+!i122 266
+R15
+VaLPfh7GRXnLGTc]bPeDQE3
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv|
+!i113 0
+R14
+R1
+vimmediate_gen
+R2
+R26
+!i10b 1
+!s100 XlXe[V:<[i>0iKaHSoZhR1
+IgF[EUbXWzFmZaRUK=KH`_0
+S1
+R6
+w1722385958
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv
+!i122 267
+L0 1 22
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv|
+!i113 0
+R14
+R1
+vinstruction_memory
+R2
+R26
+!i10b 1
+!s100 16@hoGg3b0L`[goa<kW`53
+I7`YBa7[]LiCCBlI>]d:@I1
+S1
+R6
+w1741046793
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv
+!i122 268
+L0 1 16
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv|
+!i113 0
+R14
+R1
+vPC
+R2
+R26
+!i10b 1
+!s100 aIZn;JLAke2MCQbPSS5C=1
+I7eNkZoMJ@mb;GJzn:I?AA0
+S1
+R6
+w1722472138
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv
+!i122 269
+L0 1 10
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv|
+!i113 0
+R14
+R1
+n@p@c
+vPMCP
+R2
+R3
+DXx4 work 12 PMCP_sv_unit 0 22 f1KCmn45`zcG0fU7zH8G`2
+R26
+R5
+r1
+!s85 0
+!i10b 1
+!s100 P_Gi9LT<bhA=b=[aj<9[h3
+Ija`6:;ZTU>TjC84I1cc6:0
+!s105 PMCP_sv_unit
+S1
+R6
+Z28 w1741052467
+Z29 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
+Z30 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
+!i122 270
+L0 3 140
+R10
+31
+R27
+Z31 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
+Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
+!i113 0
+R14
+R1
+n@p@m@c@p
+XPMCP_sv_unit
+R2
+R3
+R26
+Vf1KCmn45`zcG0fU7zH8G`2
+r1
+!s85 0
+!i10b 1
+!s100 R?_MVo9NN1H_HRg_U6e7k3
+If1KCmn45`zcG0fU7zH8G`2
+!i103 1
+S1
+R6
+R28
+R29
+R30
+!i122 270
+R15
+R10
+31
+R27
+R31
+R32
+!i113 0
+R14
+R1
+n@p@m@c@p_sv_unit
+vrdata_proc
+R2
+R26
+!i10b 1
+!s100 ?KG0_VU5Cd;bCUciGKfV^3
+IIV3R7Jkg:kg0bzaWKhMIH2
+S1
+R6
+w1722351334
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv
+!i122 271
+L0 1 28
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv|
+!i113 0
+R14
+R1
+vregister
+R2
+R26
+!i10b 1
+!s100 c[a0^Be?MNF:DzhCYZO581
+I8We;0NIMfWnVz6?2<8nhk2
+S1
+R6
+w1741035499
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv
+!i122 272
+L0 1 13
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv|
+!i113 0
+R14
+R1
+vregister_file
+R2
+R26
+!i10b 1
+!s100 `_JnhOFa9ZD^0FE6=XzFR2
+IRDTbZ?YF6V5l66QBcUB[20
+S1
+R6
+w1741046520
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv
+!i122 273
+L0 1 89
+R5
+R10
+r1
+!s85 0
+31
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv|
+!i113 0
+R14
+R1
+vtb
+R2
+R3
+DXx4 work 10 tb_sv_unit 0 22 N9ginb5bFmFkHg5<^jAl`0
+R26
+R5
+r1
+!s85 0
+!i10b 1
+!s100 >Y[N@;C:SWHke;P1UgTXj2
+Io6iEMbV<OEQ0R@Ghkedfn2
+!s105 tb_sv_unit
+S1
+R6
+Z33 w1741041608
+Z34 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
+Z35 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
+!i122 274
+L0 3 22
+R10
+31
+R27
+Z36 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
+Z37 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
+!i113 0
+R14
+R1
+Xtb_sv_unit
+R2
+R3
+R26
+VN9ginb5bFmFkHg5<^jAl`0
+r1
+!s85 0
+!i10b 1
+!s100 _0ezhaQz_<GQ6@>H2gM<e3
+IN9ginb5bFmFkHg5<^jAl`0
+!i103 1
+S1
+R6
+R33
+R34
+R35
+!i122 274
+R15
+R10
+31
+R27
+R36
+R37
+!i113 0
+R14
+R1

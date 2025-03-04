@@ -1,0 +1,98 @@
+{C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module rdata_proc
+
+Top level modules:
+	rdata_proc
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/header.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package header_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module control_MW
+
+Top level modules:
+	control_MW
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/register.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package tb_sv_unit
+-- Importing package header_pkg
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module immediate_gen
+
+Top level modules:
+	immediate_gen
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module branch_cond
+
+Top level modules:
+	branch_cond
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package control_DE_sv_unit
+-- Importing package header_pkg
+-- Compiling module control_DE
+
+Top level modules:
+	control_DE
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_memory
+
+Top level modules:
+	data_memory
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package ALU_sv_unit
+-- Importing package header_pkg
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/PMLS/Desktop/Computer Architecture/Lab/Pipeline Procecessor/PC.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}}

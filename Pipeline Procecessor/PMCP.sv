@@ -7,29 +7,28 @@ module PMCP(
 logic signed [20:0] immediate;
 logic signed [31:0] rdata1, rdata2, rdata2_MW, wdata, rdata, imm, 
 A, B, ALU_out, ALU_out_MW, proc_data;
-logic reg_wr, reg_wr_DE, reg_wr_MW, u, u_DE, sel_A, sel_A_DE, sel_B, 
-sel_B_DE, wr_en, wr_en_DE, wr_en_MW, rd_en, rd_en_DE, rd_en_MW, jump, 
-jump_DE, br_taken;
+logic reg_wr_DE, reg_wr_MW, u_DE, sel_A_DE, sel_B_DE, 
+wr_en_DE, wr_en_MW, rd_en_DE, rd_en_MW, jump_DE, br_taken;
 logic [31:0] instr, instr_DE, instr_MW, new_addr, curr_addr, curr_addr_DE,
 curr_addr_MW, PC_4;
 logic [4:0] raddr1, raddr2, waddr;
 logic [6:0] func7, op_code;
-logic [2:0] br_type, br_type_DE, size, size_DE, size_MW, func3;
-logic [1:0] wb_sel, wb_sel_DE, wb_sel_MW;
-alu_ops_t alu_op, alu_op_DE;
+logic [2:0] br_type_DE, size_DE, size_MW, func3;
+logic [1:0] wb_sel_DE, wb_sel_MW;
+alu_ops_t alu_op_DE;
 
 PC PC(.reset(reset), .clk(clk), .d(new_addr), .q(curr_addr));
 
 instruction_memory instr_mem(.addr(curr_addr), .instr(instr));
 
-register PC_DE(.D(curr_addr), .Q(curr_addr_DE));
+register PC_DE(.clk(clk), .reset(reset), .D(curr_addr), .Q(curr_addr_DE));
 
-register IR_DE(.D(instr), .Q(instr_DE));
+register IR_DE(.clk(clk), .reset(reset), .D(instr), .Q(instr_DE));
 
-register_file register_file(.clk(clk), .reset(reset), .reg_wr(reg_wr), .raddr1(raddr1),
+register_file register_file(.clk(clk), .reset(reset), .reg_wr(reg_wr_MW), .raddr1(raddr1),
 .raddr2(raddr2), .waddr(waddr), .wdata(wdata), .rdata1(rdata1), .rdata2(rdata2));
 
-immediate_gen immediate_gen (.u(u), .imm(immediate), .out(imm));
+immediate_gen immediate_gen (.u(u_DE), .imm(immediate), .out(imm));
 
 control_DE control_DE(.op_code(op_code), .func3(func3), .func7(func7), .reg_wr(reg_wr_DE),
 .rd_en(rd_en_DE), .wr_en(wr_en_DE), .u(u_DE), .sel_A(sel_A_DE), .sel_B(sel_B_DE), .jump(jump_DE), 
@@ -43,13 +42,13 @@ branch_cond branch_cond(.rdata1(rdata1), .rdata2(rdata2), .br_type(br_type_DE), 
 
 ALU ALU(.A(A), .B(B), .alu_op(alu_op_DE), .out(ALU_out));
 
-register PC_MW(.D(curr_addr_DE), .Q(curr_addr_MW));
+register PC_MW(.clk(clk), .reset(reset), .D(curr_addr_DE), .Q(curr_addr_MW));
 
-register ALU_MW(.D(ALU_out), .Q(ALU_out_MW));
+register ALU_MW(.clk(clk), .reset(reset), .D(ALU_out), .Q(ALU_out_MW));
 
-register WD_MW(.D(rdata2), .Q(rdata2_MW));
+register WD_MW(.clk(clk), .reset(reset), .D(rdata2), .Q(rdata2_MW));
 
-register IR_MW(.D(instr_DE), .Q(instr_MW));
+register IR_MW(.clk(clk), .reset(reset), .D(instr_DE), .Q(instr_MW));
 
 data_memory data_memory(.clk(clk), .reset(reset), .wr_en(wr_en_MW), .rd_en(rd_en_MW), .addr(ALU_out_MW), 
 .wdata(rdata2_MW), .size(size_MW), .rdata(rdata));

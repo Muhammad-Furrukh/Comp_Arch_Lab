@@ -18,7 +18,7 @@ end
 
 always_ff @(negedge clk) begin
   if (reset) begin
-    mem <= '{ 256{8'h0} };
+    mem <= '{ 256{8'hx} };
   end
   else if (wr_en) begin
     case(size)

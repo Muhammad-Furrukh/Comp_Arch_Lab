@@ -57,48 +57,49 @@ rdata_proc rdata_proc(.rdata(rdata), .size(size_MW), .proc_data(proc_data));
 
 // Decoder
 always_comb begin
-  case(instr[6:0])
+  case(instr_DE[6:0])
     7'd51: begin
       func7 = instr_DE[31:25]; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = 21'b0;
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = 21'b0;
     end
     7'd3: begin
       func7 = 7'b0; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
     end
     7'd19: begin
       func7 = instr_DE[31:25]; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
     end
     7'd103: begin
       func7 = instr_DE[31:25]; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:20]};
     end
     7'd35: begin
       func7 = 7'b0; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = 5'b0; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:25], instr_DE[11:7]};
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = {9'b0, instr_DE[31:25], instr_DE[11:7]};
     end
     7'd99: begin
       func7 = 7'b0; raddr2 = instr_DE[24:20]; raddr1 = instr_DE[19:15];
-      func3 = instr_DE[14:12]; waddr = 5'b0; op_code = instr_DE[6:0]; immediate = {8'b0, instr_DE[31], instr_DE[7], instr_DE[30:25], instr_DE[11:8], 1'b0};
+      func3 = instr_DE[14:12]; op_code = instr_DE[6:0]; immediate = {8'b0, instr_DE[31], instr_DE[7], instr_DE[30:25], instr_DE[11:8], 1'b0};
     end
     7'd23: begin
       func7 = 7'b0; raddr2 = 5'b0; raddr1 = 5'b0;
-      func3 = 3'b0; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {1'b0, instr_DE[31:12]};
+      func3 = 3'b0; op_code = instr_DE[6:0]; immediate = {1'b0, instr_DE[31:12]};
     end
     7'd55: begin
       func7 = 7'b0; raddr2 = 5'b0; raddr1 = 5'b0;
-      func3 = 3'b0; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {1'b0, instr_DE[31:12]};
+      func3 = 3'b0; op_code = instr_DE[6:0]; immediate = {1'b0, instr_DE[31:12]};
     end
     7'd111: begin
       func7 = 7'b0; raddr2 = 5'b0; raddr1 = 5'b0;
-      func3 = 3'b0; waddr = instr_MW[11:7]; op_code = instr_DE[6:0]; immediate = {instr_DE[31], instr_DE[19:12], instr_DE[20], instr_DE[30:21], 1'b0};
+      func3 = 3'b0; op_code = instr_DE[6:0]; immediate = {instr_DE[31], instr_DE[19:12], instr_DE[20], instr_DE[30:21], 1'b0};
     end
     default: begin
       func7 = 7'b0; raddr2 = 5'b0; raddr1 = 5'b0;
       func3 = 3'b0; waddr = 5'b0; op_code = 7'b0; immediate = 21'b0;
     end
   endcase
+  waddr = instr_MW[11:7];
 end
 
 always_comb begin

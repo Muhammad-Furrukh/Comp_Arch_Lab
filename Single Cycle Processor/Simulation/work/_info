@@ -21,6 +21,8 @@ R0
 R0
 R0
 R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -28,423 +30,434 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/Single Cycle Processor/Simulation
+Z1 dC:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/Single Cycle Processor/Simulation
 T_opt
 !s110 1740769977
 VRGM3=4eSMXHj@b=k9<hag0
-04 2 4 work tb fast 0
+Z2 04 2 4 work tb fast 0
 =1-c423605a1469-67c20ab8-1a1-52e4
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
 n@_opt
-OL;O;2021.1;73
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1741063598
+VozPz^bhLSkGLk[U`S0`Wk2
+R2
+=2-745d2227d577-67c685ad-30a-5dd4
+R3
+R4
+R5
+n@_opt1
+R6
 vALU
-Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 DXx4 work 10 header_pkg 0 22 YQW<7P_jW`E=LHX<e4egE1
-DXx4 work 11 ALU_sv_unit 0 22 zZR;9MjRQnm?M1NW9iP]o3
-Z4 !s110 1740769970
-Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 DXx4 work 10 header_pkg 0 22 TW8EXo_aZ]S7ImQi9i^<;0
+DXx4 work 11 ALU_sv_unit 0 22 zdUk@RSKnLk@;=[jUAMjY2
+Z9 !s110 1741063582
+Z10 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
 !s100 5ck:nMoVR77Tj:gNe^ak;1
-I;>FGEfRSXaRcgF8W@[E1a1
+INCz_8BkLT:?jC5Lob1ToV1
 !s105 ALU_sv_unit
 S1
-Z6 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/Simulation
-Z7 w1739827334
-Z8 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv
-Z9 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv
-!i122 309
+Z11 dC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/Simulation
+Z12 w1739827336
+Z13 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/ALU.sv
+Z14 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/ALU.sv
+!i122 333
 L0 3 36
-Z10 OL;L;2021.1;73
+Z15 OL;L;2021.1;73
 31
-Z11 !s108 1740769970.000000
-Z12 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv|
-Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/ALU.sv|
+Z16 !s108 1741063582.000000
+Z17 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/ALU.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/ALU.sv|
 !i113 0
-Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
 n@a@l@u
 XALU_sv_unit
-R2
-R3
-R4
-VzZR;9MjRQnm?M1NW9iP]o3
+R7
+R8
+R9
+VzdUk@RSKnLk@;=[jUAMjY2
 r1
 !s85 0
 !i10b 1
 !s100 OI@9J>PiLM:hQ@jLlXSRf1
-IzZR;9MjRQnm?M1NW9iP]o3
+IzdUk@RSKnLk@;=[jUAMjY2
 !i103 1
 S1
-R6
-R7
-R8
-R9
-!i122 309
-Z15 L0 1 0
-R10
-31
 R11
 R12
 R13
-!i113 0
 R14
-R1
+!i122 333
+Z20 L0 1 0
+R15
+31
+R16
+R17
+R18
+!i113 0
+R19
+R5
 n@a@l@u_sv_unit
 vbranch_cond
-R2
-R4
+R7
+R9
 !i10b 1
 !s100 cB9Z1dBCn3fb3:W9aPObS3
-I?[E0IA```LCK_hVHeO<TC0
+IlzJLC_aBSQD:bGf5z5Zz80
 S1
-R6
-w1722365972
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv
-!i122 310
+R11
+w1722365974
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv
+!i122 334
 L0 1 56
-R5
 R10
+R15
 r1
 !s85 0
 31
-R11
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv|
+R16
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/branch_cond.sv|
 !i113 0
-R14
-R1
-vcontrol
-R2
-R3
-DXx4 work 15 control_sv_unit 0 22 =o]Cj2Xn4nMn5lW8iNA`>3
-R4
+R19
 R5
+vcontrol
+R7
+R8
+DXx4 work 15 control_sv_unit 0 22 OzEjQVU>0gAhbW[lmMZL72
+Z21 !s110 1741063583
+R10
 r1
 !s85 0
 !i10b 1
 !s100 6AOa5YlNlAZfBFhkihIVl3
-I;`LR1Q=9KPNTATQG9R_^E0
+I0Oh6]3>CSCW2]gPDX>7eM2
 !s105 control_sv_unit
 S1
-R6
-Z16 w1740423784
-Z17 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/control.sv
-Z18 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/control.sv
-!i122 311
-L0 3 136
-R10
-31
 R11
-Z19 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/control.sv|
-Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/control.sv|
+Z22 w1740423786
+Z23 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/control.sv
+Z24 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/control.sv
+!i122 335
+L0 3 136
+R15
+31
+R16
+Z25 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/control.sv|
+Z26 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/control.sv|
 !i113 0
-R14
-R1
+R19
+R5
 Xcontrol_sv_unit
-R2
-R3
-R4
-V=o]Cj2Xn4nMn5lW8iNA`>3
+R7
+R8
+R21
+VOzEjQVU>0gAhbW[lmMZL72
 r1
 !s85 0
 !i10b 1
 !s100 N<dFbobe_QXTU<?mW`A0=2
-I=o]Cj2Xn4nMn5lW8iNA`>3
+IOzEjQVU>0gAhbW[lmMZL72
 !i103 1
 S1
-R6
-R16
-R17
-R18
-!i122 311
-R15
-R10
-31
 R11
-R19
+R22
+R23
+R24
+!i122 335
 R20
+R15
+31
+R16
+R25
+R26
 !i113 0
-R14
-R1
+R19
+R5
 vdata_memory
-R2
-R4
+R7
+R21
 !i10b 1
 !s100 Kn8HohdX?QdG_<0mQDjoS0
-IBiXn1MaRgAB_bgYMA1]Rb3
+I^:linVn0WY:>jV]?3z3Y:0
 S1
-R6
-w1740769898
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv
-!i122 312
+R11
+w1740769900
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv
+!i122 336
 L0 1 39
-R5
 R10
+R15
 r1
 !s85 0
 31
-R11
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv|
+Z27 !s108 1741063583.000000
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/data_memory.sv|
 !i113 0
-R14
-R1
+R19
+R5
 Xheader_pkg
-R2
-Z21 !s110 1740769971
+R7
+R21
 !i10b 1
 !s100 ngGaW2UMl@fMECR_f@B6m3
-IYQW<7P_jW`E=LHX<e4egE1
+ITW8EXo_aZ]S7ImQi9i^<;0
 S1
-R6
-w1739827282
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/header.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/header.sv
-!i122 313
+R11
+w1739827284
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/header.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/header.sv
+!i122 337
+R20
+VTW8EXo_aZ]S7ImQi9i^<;0
 R15
-VYQW<7P_jW`E=LHX<e4egE1
-R10
 r1
 !s85 0
 31
-Z22 !s108 1740769971.000000
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/header.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/header.sv|
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/header.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/header.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vimmediate_gen
-R2
-R21
+R7
+Z28 !s110 1741063584
 !i10b 1
 !s100 XlXe[V:<[i>0iKaHSoZhR1
-IR6e0:h=z96l?]z?IXbY4=1
+IfIOD7WmL5gA^UKUD`2X]i0
 S1
-R6
-w1722385957
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv
-!i122 314
+R11
+w1722385958
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv
+!i122 338
 L0 1 22
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv|
+R27
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/immediate_gen.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vinstruction_memory
-R2
-R21
+R7
+R28
 !i10b 1
-!s100 0d^VH]3J9C8N]=1mB_WiJ2
-IY11lGWzojzhNcmkoNF6[82
+!s100 16@hoGg3b0L`[goa<kW`53
+IKSebZdSJ]Kj>QoBTokoIh1
 S1
-R6
-w1740452599
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv
-!i122 315
+R11
+w1741063568
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv
+!i122 339
 L0 1 16
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv|
+Z29 !s108 1741063584.000000
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/instruction_memory.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vPC
-R2
-R21
+R7
+R28
 !i10b 1
 !s100 aIZn;JLAke2MCQbPSS5C=1
-IO42[AC2NgPkYR>=FcKDQQ2
+I25PK2B2>XGe`a<GFg3=0_1
 S1
-R6
-w1722472136
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/PC.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/PC.sv
-!i122 316
+R11
+w1722472138
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/PC.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/PC.sv
+!i122 340
 L0 1 10
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/PC.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/PC.sv|
+R29
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/PC.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/PC.sv|
 !i113 0
-R14
-R1
+R19
+R5
 n@p@c
 vrdata_proc
-R2
-R21
+R7
+Z30 !s110 1741063585
 !i10b 1
 !s100 ?KG0_VU5Cd;bCUciGKfV^3
-IcfMN:=Xflf]1[:D58TDOL0
+InN>@Gc<UMG1_aMdi4`SPF2
 S1
-R6
-w1722351333
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv
-!i122 317
+R11
+w1722351334
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv
+!i122 341
 L0 1 28
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv|
+R29
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/rdata_proc.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vregister_file
-R2
-R21
+R7
+R30
 !i10b 1
 !s100 `_JnhOFa9ZD^0FE6=XzFR2
-IamB2jNGgBJ8bMSagbHVK00
+Ik1;zG?:Oe;72]1R3Ee50L3
 S1
-R6
-w1740769835
-8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv
-FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv
-!i122 318
+R11
+w1740769836
+8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/register_file.sv
+FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/register_file.sv
+!i122 342
 L0 1 89
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/register_file.sv|
+Z31 !s108 1741063585.000000
+!s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/register_file.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/register_file.sv|
 !i113 0
-R14
-R1
-vSCP
-R2
-R3
-DXx4 work 11 SCP_sv_unit 0 22 W8EHg74ah=Vl6`T6DCE`Y3
-R21
+R19
 R5
+vSCP
+R7
+R8
+DXx4 work 11 SCP_sv_unit 0 22 b4Kh95:X`mG57@l=f0J^N2
+R30
+R10
 r1
 !s85 0
 !i10b 1
 !s100 BXJ?`TiYLzcc2l7aS]^:K2
-I`mkKMK8EU>W0NBR`]a8kj0
+IB82hH^f4ML88H=Y:U8gP43
 !s105 SCP_sv_unit
 S1
-R6
-Z23 w1739853489
-Z24 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/SCP.sv
-Z25 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/SCP.sv
-!i122 319
+R11
+Z32 w1739853490
+Z33 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/SCP.sv
+Z34 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/SCP.sv
+!i122 343
 L0 3 120
-R10
+R15
 31
-R22
-Z26 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/SCP.sv|
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/SCP.sv|
+R31
+Z35 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/SCP.sv|
+Z36 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/SCP.sv|
 !i113 0
-R14
-R1
+R19
+R5
 n@s@c@p
 XSCP_sv_unit
-R2
-R3
-R21
-VW8EHg74ah=Vl6`T6DCE`Y3
+R7
+R8
+R30
+Vb4Kh95:X`mG57@l=f0J^N2
 r1
 !s85 0
 !i10b 1
 !s100 >8KS5R0mnKN5<=[z3:2cC2
-IW8EHg74ah=Vl6`T6DCE`Y3
+Ib4Kh95:X`mG57@l=f0J^N2
 !i103 1
 S1
-R6
-R23
-R24
-R25
-!i122 319
+R11
+R32
+R33
+R34
+!i122 343
+R20
 R15
-R10
 31
-R22
-R26
-R27
+R31
+R35
+R36
 !i113 0
-R14
-R1
+R19
+R5
 n@s@c@p_sv_unit
 vtb
-R2
-R3
-DXx4 work 10 tb_sv_unit 0 22 iR9jc2R5c=1dzZJ5<GnaN0
-R21
-R5
+R7
+R8
+DXx4 work 10 tb_sv_unit 0 22 aiAPXIUG^2ha^l>e@K9ZM0
+R30
+R10
 r1
 !s85 0
 !i10b 1
 !s100 LbeB]`F?C;LIbE]f_9^VY0
-IiK9aPJAVdFYm308o?2UI^2
+I5DC_b0j@MV=:]2:;VKJaS3
 !s105 tb_sv_unit
 S1
-R6
-Z28 w1739827365
-Z29 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv
-Z30 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv
-!i122 320
+R11
+Z37 w1739827366
+Z38 8C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/tb.sv
+Z39 FC:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/tb.sv
+!i122 344
 L0 3 33
-R10
+R15
 31
-R22
-Z31 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv|
-Z32 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Single Cycle Processor/tb.sv|
+R31
+Z40 !s107 C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/tb.sv|
+Z41 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/PMLS/Desktop/Computer Architecture/Lab/Single Cycle Processor/tb.sv|
 !i113 0
-R14
-R1
+R19
+R5
 Xtb_sv_unit
-R2
-R3
-R21
-ViR9jc2R5c=1dzZJ5<GnaN0
+R7
+R8
+R30
+VaiAPXIUG^2ha^l>e@K9ZM0
 r1
 !s85 0
 !i10b 1
 !s100 J<1gH<:TUOj<<3h0baHlY3
-IiR9jc2R5c=1dzZJ5<GnaN0
+IaiAPXIUG^2ha^l>e@K9ZM0
 !i103 1
 S1
-R6
-R28
-R29
-R30
-!i122 320
+R11
+R37
+R38
+R39
+!i122 344
+R20
 R15
-R10
 31
-R22
 R31
-R32
+R40
+R41
 !i113 0
-R14
-R1
+R19
+R5

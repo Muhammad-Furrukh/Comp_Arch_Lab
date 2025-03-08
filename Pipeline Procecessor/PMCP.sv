@@ -7,10 +7,10 @@ module PMCP(
 logic signed [20:0] immediate;
 logic signed [31:0] rdata1, rdata2, rdata2_MW, wdata, rdata, imm, 
 A, B, ALU_out, ALU_out_MW, proc_data;
-logic reg_wr_DE, reg_wr_MW, u_DE, sel_A_DE, sel_B_DE, 
-wr_en_DE, wr_en_MW, rd_en_DE, rd_en_MW, jump_DE, br_taken;
+logic reg_wr_DE, reg_wr_MW, u_DE, sel_A_DE, sel_B_DE, b_or_j,
+wr_en_DE, wr_en_MW, rd_en_DE, rd_en_MW, jump_DE, br_taken, r1_sel, r2_sel;
 logic [31:0] instr, instr_DE, instr_MW, new_addr, curr_addr, curr_addr_DE,
-curr_addr_MW, PC_4;
+curr_addr_MW, PC_4, rdata1_prime, rdata2_prime;
 logic [4:0] raddr1, raddr2, waddr;
 logic [6:0] func7, op_code;
 logic [2:0] br_type_DE, size_DE, size_MW, func3;
@@ -23,7 +23,7 @@ instruction_memory instr_mem(.addr(curr_addr), .instr(instr));
 
 register PC_DE(.clk(clk), .reset(reset), .D(curr_addr), .Q(curr_addr_DE));
 
-register IR_DE(.clk(clk), .reset(reset), .D(instr), .Q(instr_DE));
+instr_fetch_reg IR_DE(.clk(clk), .reset(reset), .D(instr), .Q(instr_DE), .b_or_j(b_or_j));
 
 register_file register_file(.clk(clk), .reset(reset), .reg_wr(reg_wr_MW), .raddr1(raddr1),
 .raddr2(raddr2), .waddr(waddr), .wdata(wdata), .rdata1(rdata1), .rdata2(rdata2));
@@ -54,6 +54,8 @@ data_memory data_memory(.clk(clk), .reset(reset), .wr_en(wr_en_MW), .rd_en(rd_en
 .wdata(rdata2_MW), .size(size_MW), .rdata(rdata));
 
 rdata_proc rdata_proc(.rdata(rdata), .size(size_MW), .proc_data(proc_data));
+
+hazard_unit hazard_unit(.instr_DE(instr_DE), .instr_MW(instr_MW), .r1_sel(r1_sel), .r2_sel(r2_sel));
 
 // Decoder
 always_comb begin
@@ -103,12 +105,28 @@ always_comb begin
 end
 
 always_comb begin
+  b_or_j = jump_DE | br_taken;
+  // Muxes for forwarding
+  if (r1_sel) begin
+    rdata1_prime = wdata;
+  end
+  else begin
+    rdata1_prime = rdata1;
+  end
+
+  if (r2_sel) begin
+    rdata2_prime = wdata;
+  end
+  else begin
+    rdata2_prime = rdata2;
+  end
+
   //Mux for input A to ALU
   if (sel_A_DE) begin
     A = curr_addr_DE;
   end
   else begin
-    A = rdata1;
+    A = rdata1_prime;
   end
 
   //Mux for input B to ALU
@@ -116,7 +134,7 @@ always_comb begin
     B = imm;
   end
   else begin
-    B = rdata2;
+    B = rdata2_prime;
   end
 
   //Writing address of next line
@@ -132,7 +150,7 @@ always_comb begin
   
   //Mux for PC Jump
   if (br_taken | jump_DE) begin
-    new_addr = ALU_out_MW;
+    new_addr = ALU_out;
   end
   else  begin
     new_addr = curr_addr + 4;

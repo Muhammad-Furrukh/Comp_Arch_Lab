@@ -5,7 +5,7 @@ module instruction_memory#(
   output logic [31:0] instr);
   reg [31:0] mem [0:mem_size-1]; 
   initial begin
-    $readmemh("C:/Users/PMLS/Desktop/main.txt", mem);
+    $readmemh("C:/Users/hp/Desktop/main.txt", mem);
     
   end
   

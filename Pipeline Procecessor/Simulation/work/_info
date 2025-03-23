@@ -5,6 +5,7 @@ Z0 !s99 nomlopt
 R0
 R0
 R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -12,23 +13,34 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/questasim64_2021.1/examples
+Z1 dC:/questasim64_2021.1/examples
 T_opt
 !s110 1741422646
 VK1QR>^_IlF1PdERKbS5nM3
-04 2 4 work tb fast 0
+Z2 04 2 4 work tb fast 0
 =4-c423605a1469-67cc0035-2cc-3f74
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
 n@_opt
-OL;O;2021.1;73
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1742033607
+V7MJ3>82;3[Ao74Jl=4[Y`0
+R2
+=1-c423605a1469-67d552c7-b4-3ddc
+R3
+R4
+R5
+n@_opt1
+R6
 vALU
-Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 DXx4 work 10 header_pkg 0 22 5bfzOC6[=^nVVfaSX`JaG0
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 DXx4 work 10 header_pkg 0 22 5bfzOC6[=^nVVfaSX`JaG0
 DXx4 work 11 ALU_sv_unit 0 22 =P<4A5jNkPe`a?bI6HeQU1
-Z4 !s110 1741422620
-Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z9 !s110 1742033589
+Z10 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
@@ -36,25 +48,25 @@ r1
 I?jhCmF3dhn3?K6INeBn;<1
 !s105 ALU_sv_unit
 S1
-Z6 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/Simulation
-Z7 w1739827336
-Z8 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
-Z9 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
-!i122 62
+Z11 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/Simulation
+Z12 w1739827336
+Z13 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
+Z14 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv
+!i122 78
 L0 3 36
-Z10 OL;L;2021.1;73
+Z15 OL;L;2021.1;73
 31
-Z11 !s108 1741422620.000000
-Z12 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
-Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
+Z16 !s108 1742033589.000000
+Z17 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv|
 !i113 0
-Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
+Z19 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
 n@a@l@u
 XALU_sv_unit
-R2
-R3
-R4
+R7
+R8
+R9
 V=P<4A5jNkPe`a?bI6HeQU1
 r1
 !s85 0
@@ -63,51 +75,51 @@ r1
 I=P<4A5jNkPe`a?bI6HeQU1
 !i103 1
 S1
-R6
-R7
-R8
-R9
-!i122 62
-Z15 L0 1 0
-R10
-31
 R11
 R12
 R13
-!i113 0
 R14
-R1
+!i122 78
+Z20 L0 1 0
+R15
+31
+R16
+R17
+R18
+!i113 0
+R19
+R5
 n@a@l@u_sv_unit
 vbranch_cond
-R2
-R4
+R7
+R9
 !i10b 1
 !s100 cB9Z1dBCn3fb3:W9aPObS3
 I>o6gDM^c?zfdI@[gCo_Ik0
 S1
-R6
+R11
 w1722365974
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv
-!i122 63
+!i122 79
 L0 1 56
-R5
 R10
+R15
 r1
 !s85 0
 31
-R11
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv|
 !i113 0
-R14
-R1
-vcontrol_DE
-R2
-R3
-DXx4 work 18 control_DE_sv_unit 0 22 ^R5Fl^REWfdOBeHi1cZ8W1
-Z16 !s110 1741422621
+R19
 R5
+vcontrol_DE
+R7
+R8
+DXx4 work 18 control_DE_sv_unit 0 22 ^R5Fl^REWfdOBeHi1cZ8W1
+R9
+R10
 r1
 !s85 0
 !i10b 1
@@ -115,25 +127,25 @@ r1
 Ik5ioV;SLQ2J@EV5=MhTAX0
 !s105 control_DE_sv_unit
 S1
-R6
-Z17 w1741038932
-Z18 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
-Z19 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
-!i122 64
-L0 3 136
-R10
-31
 R11
-Z20 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
-Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
+Z21 w1741038932
+Z22 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
+Z23 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv
+!i122 80
+L0 3 136
+R15
+31
+R16
+Z24 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_DE.sv|
 !i113 0
-R14
-R1
+R19
+R5
 ncontrol_@d@e
 Xcontrol_DE_sv_unit
-R2
-R3
-R16
+R7
+R8
+R9
 V^R5Fl^REWfdOBeHi1cZ8W1
 r1
 !s85 0
@@ -142,221 +154,221 @@ r1
 I^R5Fl^REWfdOBeHi1cZ8W1
 !i103 1
 S1
-R6
-R17
-R18
-R19
-!i122 64
-R15
-R10
-31
 R11
-R20
 R21
+R22
+R23
+!i122 80
+R20
+R15
+31
+R16
+R24
+R25
 !i113 0
-R14
-R1
+R19
+R5
 ncontrol_@d@e_sv_unit
 vcontrol_MW
-R2
-R16
+R7
+R9
 !i10b 1
 !s100 7aA:aK]ogGnlPmTNNQk3;2
 IUY;4o_3=Uf>z7_=P0H<]D0
 S1
-R6
+R11
 w1741045286
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv
-!i122 65
+!i122 81
 L0 1 21
-R5
 R10
+R15
 r1
 !s85 0
 31
-Z22 !s108 1741422621.000000
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv|
 !i113 0
-R14
-R1
+R19
+R5
 ncontrol_@m@w
 vdata_memory
-R2
-R16
+R7
+R9
 !i10b 1
 !s100 Kn8HohdX?QdG_<0mQDjoS0
 IG?;hINfXZn<KggOehDdNV3
 S1
-R6
+R11
 w1741046494
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv
-!i122 66
+!i122 82
 L0 1 39
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vhazard_unit
-R2
-R16
+R7
+R9
 !i10b 1
 !s100 9`g_UOjCBIXHR8]Jzg2DO1
 IjDSejbhZ@S`24EY0o<2W>1
 S1
-R6
-w1741422615
+R11
+w1741422686
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv
-!i122 67
+!i122 83
 L0 1 45
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv|
 !i113 0
-R14
-R1
+R19
+R5
 Xheader_pkg
-R2
-R16
+R7
+R9
 !i10b 1
 !s100 ngGaW2UMl@fMECR_f@B6m3
 I5bfzOC6[=^nVVfaSX`JaG0
 S1
-R6
+R11
 w1739827284
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/header.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/header.sv
-!i122 68
-R15
+!i122 84
+R20
 V5bfzOC6[=^nVVfaSX`JaG0
-R10
+R15
 r1
 !s85 0
 31
-R22
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/header.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/header.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vimmediate_gen
-R2
-R16
+R7
+Z26 !s110 1742033590
 !i10b 1
 !s100 XlXe[V:<[i>0iKaHSoZhR1
 InQK@1]H7iV<HMgoT]XJ672
 S1
-R6
+R11
 w1722385958
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv
-!i122 69
+!i122 85
 L0 1 22
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R16
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/immediate_gen.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vinstr_fetch_reg
-R2
-R16
+R7
+R26
 !i10b 1
 !s100 O7WH=A<L36lhCgOliV3mf3
 IbY1QY2LakfOF8^]aTGo2d3
 S1
-R6
+R11
 w1741419938
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instr_fetch_reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instr_fetch_reg.sv
-!i122 70
-Z23 L0 1 16
-R5
+!i122 86
+Z27 L0 1 16
 R10
+R15
 r1
 !s85 0
 31
-R22
+Z28 !s108 1742033590.000000
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instr_fetch_reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instr_fetch_reg.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vinstruction_memory
-R2
-R16
+R7
+R26
 !i10b 1
 !s100 0d^VH]3J9C8N]=1mB_WiJ2
 IdWMcz<8FdE=GZd[BDP^6N1
 S1
-R6
+R11
 w1741420865
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv
-!i122 71
-R23
-R5
+!i122 87
+R27
 R10
+R15
 r1
 !s85 0
 31
-R22
+R28
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/instruction_memory.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vPC
-R2
-R16
+R7
+R26
 !i10b 1
 !s100 aIZn;JLAke2MCQbPSS5C=1
 I1a1W58RfE:Wh[o2Rh?4mm0
 S1
-R6
+R11
 w1722472138
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PC.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PC.sv
-!i122 72
+!i122 88
 L0 1 10
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R28
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PC.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PC.sv|
 !i113 0
-R14
-R1
+R19
+R5
 n@p@c
 vPMCP
-R2
-R3
+R7
+R8
 DXx4 work 12 PMCP_sv_unit 0 22 e;c875X:9@`8`ooF4G8C]0
-R16
-R5
+R26
+R10
 r1
 !s85 0
 !i10b 1
@@ -364,25 +376,25 @@ r1
 I?9Kb_I8hTe0^jFl=ee1hj3
 !s105 PMCP_sv_unit
 S1
-R6
-Z24 w1741419985
-Z25 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
-Z26 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
-!i122 73
+R11
+Z29 w1741419985
+Z30 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
+Z31 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv
+!i122 89
 L0 3 158
-R10
+R15
 31
-R22
-Z27 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
-Z28 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
+R28
+Z32 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/PMCP.sv|
 !i113 0
-R14
-R1
+R19
+R5
 n@p@m@c@p
 XPMCP_sv_unit
-R2
-R3
-R16
+R7
+R8
+R26
 Ve;c875X:9@`8`ooF4G8C]0
 r1
 !s85 0
@@ -391,99 +403,99 @@ r1
 Ie;c875X:9@`8`ooF4G8C]0
 !i103 1
 S1
-R6
-R24
-R25
-R26
-!i122 73
+R11
+R29
+R30
+R31
+!i122 89
+R20
 R15
-R10
 31
-R22
-R27
 R28
+R32
+R33
 !i113 0
-R14
-R1
+R19
+R5
 n@p@m@c@p_sv_unit
 vrdata_proc
-R2
-R16
+R7
+R26
 !i10b 1
 !s100 ?KG0_VU5Cd;bCUciGKfV^3
 IoeT5L75U]4_C>1:mgQ7G>1
 S1
-R6
+R11
 w1722351334
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv
-!i122 74
+!i122 90
 L0 1 28
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R28
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/rdata_proc.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vregister
-R2
-Z29 !s110 1741422622
+R7
+R26
 !i10b 1
 !s100 c[a0^Be?MNF:DzhCYZO581
 IYR3C1mk<zkIR7JW4BjkT43
 S1
-R6
+R11
 w1741035500
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register.sv
-!i122 75
+!i122 91
 L0 1 13
-R5
 R10
+R15
 r1
 !s85 0
 31
-R22
+R28
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register.sv|
 !i113 0
-R14
-R1
+R19
+R5
 vregister_file
-R2
-R29
+R7
+R26
 !i10b 1
 !s100 `_JnhOFa9ZD^0FE6=XzFR2
 I^0Kn3ANMY^`@5PP8]SgW:1
 S1
-R6
+R11
 w1741046522
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv
-!i122 76
+!i122 92
 L0 1 89
-R5
 R10
+R15
 r1
 !s85 0
 31
-Z30 !s108 1741422622.000000
+R28
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv|
 !i113 0
-R14
-R1
-vtb
-R2
-R3
-DXx4 work 10 tb_sv_unit 0 22 SfSIfL7mP]Wm<Gd9b<FKf0
-R29
+R19
 R5
+vtb
+R7
+R8
+DXx4 work 10 tb_sv_unit 0 22 SfSIfL7mP]Wm<Gd9b<FKf0
+R26
+R10
 r1
 !s85 0
 !i10b 1
@@ -491,24 +503,24 @@ r1
 IU;ED=Nf5bHLih1J]`n54g0
 !s105 tb_sv_unit
 S1
-R6
-Z31 w1741041610
-Z32 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
-Z33 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
-!i122 77
+R11
+Z34 w1741041610
+Z35 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
+Z36 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv
+!i122 93
 L0 3 22
-R10
+R15
 31
-R30
-Z34 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
-Z35 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
+R28
+Z37 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
+Z38 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/tb.sv|
 !i113 0
-R14
-R1
+R19
+R5
 Xtb_sv_unit
-R2
-R3
-R29
+R7
+R8
+R26
 VSfSIfL7mP]Wm<Gd9b<FKf0
 r1
 !s85 0
@@ -517,17 +529,17 @@ r1
 ISfSIfL7mP]Wm<Gd9b<FKf0
 !i103 1
 S1
-R6
-R31
-R32
-R33
-!i122 77
-R15
-R10
-31
-R30
+R11
 R34
 R35
+R36
+!i122 93
+R20
+R15
+31
+R28
+R37
+R38
 !i113 0
-R14
-R1
+R19
+R5

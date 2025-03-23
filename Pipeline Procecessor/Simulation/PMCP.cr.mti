@@ -68,6 +68,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	immediate_gen
 
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/hazard_unit.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module hazard_unit
+
+Top level modules:
+	hazard_unit
+
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/branch_cond.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module branch_cond
@@ -82,6 +89,13 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	--none--
 
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_memory
+
+Top level modules:
+	data_memory
+
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/ALU.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling package ALU_sv_unit
@@ -91,12 +105,12 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	ALU
 
-} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/data_memory.sv}
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
--- Compiling module data_memory
+-- Compiling module control_MW
 
 Top level modules:
-	data_memory
+	control_MW
 
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/register_file.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
@@ -104,12 +118,5 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 
 Top level modules:
 	register_file
-
-} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline Procecessor/control_MW.sv}
-QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
--- Compiling module control_MW
-
-Top level modules:
-	control_MW
 
 } {} {}}

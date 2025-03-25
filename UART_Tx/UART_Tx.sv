@@ -1,29 +1,73 @@
-module UART_Tx(input logic clk, rst_n, Tx_en, Two_stop, Odd_parity, [7:0] raw_data, //[13:0] baud_divisor,
-output logic Tx_out);
+module UART_Tx(
+  input logic [31:0] addr,
+  input logic [13:0] baud_divisor,
+  input logic [7:0]  raw_data;
+  input logic        wr_en;
+  input logic        rd_en;
+  input logic        clk,
+  input logic        rst_n,
+  input logic        Tx_en,
+  input logic        Two_stop,
+  input logic        Odd_parity,
+  output logic       Tx_out);
 
-parameter BAUD_DIVISOR = 868;
-parameter INIT = 3'b000, FIFO_LOAD = 3'b001, READY = 3'b010, TX_START = 3'b011, 
+parameter BAUD_DIVISOR = 868; // baud_divisor = 100,000,000/115,200
+parameter INIT = 3'b000, CONFIGURED = 3'b001, FIFO_LOAD = 3'b010, TX_START = 3'b011, 
 CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
 
-// Signal Lines
-logic [7:0] data, fifo_data;
-logic [13:0] baud_divisor_r, baud_count;
-logic fifo_load, parity_bit, shift_en, load_en, Tx_sel, bit_count, Odd_parity_r, count_en,
-Tx_en_r, baud_eq, fifo_status, Two_stop_r, bit_eq, Tx_status, shift_rst, serial_out;
 
-logic [2:0] c_state, n_state;
+// Controller Output Signals
+logic Tx_sel;
+logic shift_rst;
+logic load_en;
+logic shift_en;
+logic count_en;
+logic fifo_load;
+logic data_status;
+
+// Controller Input Signals
+logic Tx_en_r;
+logic fifo_full;
+logic baud_eq;
+logic fifo_empty;
+logic bit_eq;
+logic control_status;
+logic config_en;
+
+// Controller States
+logic [2:0] c_state;
+logic [2:0] n_state;
+
+// Signal Lines
+logic [13:0] baud_divisor_r;
+logic [13:0] baud_count;
+logic [7:0]  data; 
+logic [7:0]  fifo_data;
+logic [3:0]  fifo_count_r;
+logic [3:0]  fifo_count_plus;
+logic [3:0]  fifo_count_sub;
+logic [1:0]  fifo_count_sel;
+logic        parity_bit;
+logic        bit_count;
+logic        Odd_parity_r;
+logic        Two_stop_r;
+logic        serial_out;
+logic        baud_configured
 
 // Registers
-logic [13:0] Baud_Reg, Baud_Counter;
+logic [13:0] Baud_Reg;
+logic [13:0] Baud_Counter;
 logic [10:0] Shift_Reg;
-logic [7:0] Data_Reg, Tx_FIFO;
-logic [3:0] Bit_Counter;
-logic [2:0] Control_Reg;
-logic FIFO_EMPTY;
+logic [7:0]  Data_Reg;
+logic [7:0]  Tx_FIFO;
+logic [3:0]  Bit_Counter;
+logic [3:0]  FIFO_Count;
+logic [2:0]  Control_Reg;
+logic        Status_Reg;
 
 // Controller State Register
-always_ff @(posedge clk or negedge rst_n) begin
-  if (!rst_n)
+always_ff @(posedge clk or posedge rst_n) begin
+  if (rst_n)
     begin c_state <= INIT; end
   else
     begin c_state <= n_state; end
@@ -33,46 +77,43 @@ end
 always_comb begin
   case(c_state)
     INIT: begin 
-        if (fifo_status)
-          begin n_state = FIFO_LOAD; end
-        else
-          begin n_state = INIT; end
+        if ((control_status) && (baud_configured)) begin         // Are control and baud registers configured?
+          n_state = CONFIGURED; end
+        else begin 
+          n_state = INIT; end
+    end
+    CONFIGURED: begin
+        if ((Tx_en_r) && (wr_en) && (addr == 32'b0)) begin        // Is data available? Tx enabled? FIFO is empty(assumed)
+          n_state = FIFO_LOAD; end
+        else begin 
+          n_state = CONFIGURED; end
     end
     FIFO_LOAD: begin
-        if (Tx_status)
-          begin n_state = FIFO_LOAD; end
-        else 
-          begin n_state = READY; end
-    end
-    READY: begin
-        if (Tx_en_r)
-          begin n_state = TX_START; end
-        else
-          begin n_state = READY; end
+        if ((Tx_en_r) && (!fifo_empty)) begin                   // Is the tranmitter enabled?
+          n_state = TX_START; end
+        else begin 
+          n_state = FIFO_LOAD; end
     end
     TX_START: begin
-        if (baud_eq)
-          begin n_state = CHANGE_BIT; end
-        else
-          begin n_state = TX_START; end
+        if (baud_eq) begin                                      // One baud cycle has passed?
+          n_state = CHANGE_BIT; end
+        else begin 
+          n_state = TX_START; end
     end
     CHANGE_BIT: begin
-        if (bit_eq && fifo_status)
-          begin n_state = FIFO_LOAD; end
-        else if (bit_eq && (!fifo_status))
-          begin n_state = INIT; end
-        else
-          begin n_state = CONT_BIT; end
+        n_state = CONT_BIT;
     end
     CONT_BIT: begin
-        if (bit_eq && fifo_status)
-          begin n_state = FIFO_LOAD; end
-        else if (bit_eq && (!fifo_status))
-          begin n_state = INIT; end
-        else if ((!bit_eq) && baud_eq)
-          begin n_state = CHANGE_BIT; end
-        else
-          begin n_state = CONT_BIT; end
+        if ((!bit_eq) && (baud_eq)) begin 
+          n_state = CHANGE_BIT; end
+        else if ((bit_eq) && (!fifo_empty)) begin 
+          n_state = TX_START; end
+        else if ((bit_eq) && (fifo_empty) && (!Tx_en)) begin 
+          n_state = INIT; end
+        else if ((bit_eq) && (fifo_empty) && (Tx_en)) begin 
+          n_state = FIFO_LOAD; end
+        else begin 
+          n_state = CONT_BIT; end
     end
     default: n_state = INIT;
   endcase
@@ -82,60 +123,127 @@ end
 always_comb begin
   case(c_state)
     INIT: begin
-        if (fifo_status) begin
-            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+        fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0; data_status = 0;
+        if ((control_status) && (baud_configured)) begin
+          config_en = 0; end
+        else begin
+          config_en = 1; end
+    end
+    CONFIGURED: begin
+        count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0; config_en = 0;
+        if ((Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 1; data_status = 0;
+        end
+        else if ((!Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 0; data_status = 1;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            fifo_load = 0; data_status = 0;
         end
     end
-    FIFO_LOAD: begin
-        if (Tx_status) begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+    FIFO_LOAD: begin 
+        shift_en = 0; shift_rst = 0; config_en = 0;
+        if ((!Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 0; count_en = 0; load_en = 0; Tx_sel = 0; data_status = 1;
+        end
+        else if ((!Tx_en_r)) begin
+            fifo_load = 0; count_en = 0; load_en = 0; Tx_sel = 0; data_status = 0;
+        end
+        else if ((!fifo_empty) && (((wr_en) && (addr == 32'b0)) || data_status)) begin          // Even if FIFO is full, 8 bits will be removed, so fifo can load data
+            fifo_load = 1; count_en = 1; load_en = 1; Tx_sel = 1; data_status = 0;
+        end
+        else if ((!fifo_empty)) begin
+            fifo_load = 0; count_en = 1; load_en = 1; Tx_sel = 1; data_status = 0;
+        end
+        else if ((((wr_en) && (addr == 32'b0)) || data_status)) begin
+            fifo_load = 1; count_en = 0; load_en = 0; Tx_sel = 0; data_status = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 1; Tx_sel = 0; shift_rst = 0;
-        end
-    end
-    READY: begin
-        if (Tx_en_r) begin
-            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; shift_rst = 0;
-        end
-        else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            fifo_load = 0; count_en = 0; load_en = 0; Tx_sel = 0; data_status = 0;
         end
     end
     TX_START: begin
+        count_en = 1; load_en = 0; Tx_sel = 1; shift_rst = 0; config_en = 0;
         if (baud_eq) begin
-            fifo_load = 0; count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            shift_en = 1; 
         end
         else begin
-            fifo_load = 0; count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            shift_en = 0;
+        end
+
+        // FIFO LOADING LOGIC
+        if ((!Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 0; data_status = 1;
+        end
+        else if ((!Tx_en_r)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((!fifo_empty) && (((wr_en) && (addr == 32'b0)) || data_status)) begin          // Even if FIFO is full, 8 bits will be removed, so fifo can load data
+            fifo_load = 1; data_status = 0;
+        end
+        else if ((!fifo_empty)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((((wr_en) && (addr == 32'b0)) || data_status)) begin
+            fifo_load = 1; data_status = 0;
+        end
+        else begin
+            fifo_load = 0; data_status = 0;
         end
     end
     CHANGE_BIT: begin
-        if (bit_eq && fifo_status) begin
-            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; shift_rst = 0; config_en = 0;
+        
+        // FIFO LOADING LOGIC
+        if ((!Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 0; data_status = 1;
         end
-        else if (bit_eq && (!fifo_status)) begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        else if ((!Tx_en_r)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((!fifo_empty) && (((wr_en) && (addr == 32'b0)) || data_status)) begin          // Even if FIFO is full, 8 bits will be removed, so fifo can load data
+            fifo_load = 1; data_status = 0;
+        end
+        else if ((!fifo_empty)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((((wr_en) && (addr == 32'b0)) || data_status)) begin
+            fifo_load = 1; data_status = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            fifo_load = 0; data_status = 0;
         end
     end
     CONT_BIT: begin
-        if (bit_eq && fifo_status) begin
-            fifo_load = 1; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
+        config_en = 0;
+        if ((bit_eq) && (!fifo_empty)) begin
+            count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
         end
-        else if (bit_eq && (!fifo_status)) begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 1;
-        end
-        else if ((!bit_eq) && baud_eq) begin
-            fifo_load = 0; count_en = 0; shift_en = 1; load_en = 0; Tx_sel = 0; shift_rst = 0;
+        else if (baud_eq) begin
+            count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 1; shift_rst = 0;
         end
         else begin
-            fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0;
+            count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; shift_rst = 0;
+        end
+
+        // FIFO LOADING LOGIC
+        if ((!Tx_en_r) && (wr_en) && (addr == 32'b0)) begin
+            fifo_load = 0; data_status = 1;
+        end
+        else if ((!Tx_en_r)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((!fifo_empty) && (((wr_en) && (addr == 32'b0)) || data_status)) begin          // Even if FIFO is full, 8 bits will be removed, so fifo can load data
+            fifo_load = 1; data_status = 0;
+        end
+        else if ((!fifo_empty)) begin
+            fifo_load = 0; data_status = 0;
+        end
+        else if ((((wr_en) && (addr == 32'b0)) || data_status)) begin
+            fifo_load = 1; data_status = 0;
+        end
+        else begin
+            fifo_load = 0; data_status = 0;
         end
     end
     default: begin fifo_load = 0; count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; shift_rst = 0; end

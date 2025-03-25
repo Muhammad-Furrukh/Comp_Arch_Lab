@@ -6,4 +6,6 @@ module Tx_FIFO(
     input logic        fifo_load,
     output logic [7:0] fifo_data
 );
+
+logic [7:0] fifo [7:0];
 endmodule

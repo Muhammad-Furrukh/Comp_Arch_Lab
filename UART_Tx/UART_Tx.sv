@@ -22,6 +22,7 @@ logic shift_en;
 logic count_en;
 logic fifo_load;
 logic data_status;
+logic config_en;
 
 // Controller Input Signals
 logic Tx_en_r;
@@ -30,7 +31,6 @@ logic baud_eq;
 logic fifo_empty;
 logic bit_eq;
 logic control_status;
-logic config_en;
 
 // Controller States
 logic [2:0] c_state;
@@ -44,6 +44,7 @@ logic [7:0]  fifo_data;
 logic [3:0]  fifo_count_r;
 logic [3:0]  fifo_count_plus;
 logic [3:0]  fifo_count_sub;
+logic [3:0]  fifo_count;
 logic [1:0]  fifo_count_sel;
 logic        parity_bit;
 logic        bit_count;
@@ -220,19 +221,23 @@ Tx_Data_Reg Tx_Data_Reg(.clk(clk), .reset(reset), .D(raw_data), .Q(data));
 Tx_Baud_Reg Tx_Baud_Reg(.clk(clk), .reset(reset), .D(baud_divisor), .Q(baud_divisor_r));
 
 // Transmission FIFO
-always_ff @(posedge clk or negedge rst_n) begin
-    if ((!rst_n) || load_en)
-      begin Tx_FIFO <= 8'h00; end
-    else if (fifo_load)
-      begin Tx_FIFO <= data; end
-end
+Tx_FIFO Tx_FIFO(.clk(clk), .reset(reset), .data(data), .pointer(pointer), .fifo_load(.fifo_load),
+.load_en(load_en), .fifo_data(fifo_data));
 
-// FIFO Status Register
+// FIFO Count Register
+Tx_FIFO_Count_Reg Tx_FIFO_Count_Reg(.clk(.clk), .reset(reset), .fifo_count(fifo_count),
+.fifo_count_r(fifo_count_r));
+
+// Control and Status Register
 always_ff @(posedge clk or negedge rst_n) begin
-    if ((!rst_n) || load_en)
-      begin FIFO_EMPTY <= 1; end
-    else if (fifo_load)
-      begin FIFO_EMPTY <= 0; end
+    if (!rst_n)
+      begin Control_Reg <= 3'b000; end
+    else if (!Tx_sel) begin
+        Control_Reg[0] <= Tx_en;
+        Control_Reg[1] <= Two_stop;
+        Control_Reg[2] <= Odd_parity;
+    end
+      
 end
 
 // Shift Register
@@ -256,17 +261,6 @@ always_ff @(posedge clk or negedge rst_n) begin
     end
 end
 
-// Control Register
-always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
-      begin Control_Reg <= 3'b000; end
-    else if (!Tx_sel) begin
-        Control_Reg[0] <= Tx_en;
-        Control_Reg[1] <= Two_stop;
-        Control_Reg[2] <= Odd_parity;
-    end
-      
-end
 
 // Baud Counter
 always_ff @(posedge clk or negedge rst_n) begin

@@ -3,7 +3,7 @@ import header_pkg::*;
 module PMCP(
   input  logic clk, 
   input  logic reset,
-  output logic Tx_out;
+  output logic Tx_out
 );
 
 logic signed [31:0] rdata1;
@@ -11,6 +11,8 @@ logic signed [31:0] rdata2;
 logic signed [31:0] rdata2_MW;
 logic signed [31:0] wdata;
 logic signed [31:0] rdata;
+logic signed [31:0] rdata_mem;
+logic signed [31:0] rdata_uart;
 logic signed [31:0] imm; 
 logic signed [31:0] A; 
 logic signed [31:0] B;
@@ -92,7 +94,7 @@ register WD_MW(.clk(clk), .reset(reset), .D(rdata2), .Q(rdata2_MW));
 register IR_MW(.clk(clk), .reset(reset), .D(instr_DE), .Q(instr_MW));
 
 data_memory data_memory(.clk(clk), .reset(reset), .wr_en(wr_en_MW), .rd_en(rd_en_MW), .addr(data_addr_off), 
-.wdata(rdata2_MW), .size(size_MW), .rdata(rdata));
+.wdata(rdata2_MW), .size(size_MW), .rdata(rdata_mem));
 
 rdata_proc rdata_proc(.rdata(rdata), .size(size_MW), .proc_data(proc_data));
 
@@ -100,7 +102,7 @@ hazard_unit hazard_unit(.instr_DE(instr_DE), .instr_MW(instr_MW), .r1_sel(r1_sel
 
 UART_Tx UART_Tx(.clk(clk), .reset(reset), .addr(uart_addr_off), .baud_divisor(rdata2_MW[13:0]), .raw_data(rdata2_MW[7:0]),
 .wr_en(wr_en_MW), .rd_en(rd_en_MW), .Tx_en(rdata2_MW[0]), .Two_stop(rdata2_MW[1]), .Odd_parity(rdata2_MW[2]),
-.Tx_out(Tx_out));
+.Tx_out(Tx_out), .rdata(rdata_uart));
 
 // Decoder
 always_comb begin
@@ -160,13 +162,15 @@ always_comb begin
     instr_addr_off = 32'hx;
     data_addr_off = ALU_out_MW - 32'h80000000;
     uart_addr_off = 32'hx;
+    rdata = rdata_mem;
   end
   else if ((ALU_out_MW >= 32'h80000200) && (ALU_out_MW < 32'h80000300)) begin // uart region
     instr_addr_off = 32'hx;
     data_addr_off = 32'hx;
     uart_addr_off = ALU_out_MW - 32'h80000200;
+    rdata = rdata_uart;
   end
-  
+
   b_or_j = jump_DE | br_taken;
   // Muxes for forwarding
   if (r1_sel) begin

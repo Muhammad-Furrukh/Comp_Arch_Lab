@@ -1,9 +1,79 @@
-{C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv}
+{D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_Tx_tb
+
+Top level modules:
+	UART_Tx_tb
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_FIFO_Count_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_FIFO_Count_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_FIFO_Count_Reg
+
+Top level modules:
+	Tx_FIFO_Count_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Baud_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Baud_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Baud_Reg
+
+Top level modules:
+	Tx_Baud_Reg
+
+} {} {}} {C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module UART_Tx
 ** Warning: C:/Users/hp/OneDrive/Documents/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv(235): (vlog-2182) 'Odd_parity_r' might be read before written in always_comb or always @* block.
 
 Top level modules:
 	UART_Tx
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Bit_Counter.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Bit_Counter.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Bit_Counter
+
+Top level modules:
+	Tx_Bit_Counter
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Shift_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Shift_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Shift_Reg
+
+Top level modules:
+	Tx_Shift_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Data_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Data_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Data_Reg
+
+Top level modules:
+	Tx_Data_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Baud_Counter.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Baud_Counter.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Baud_Counter
+
+Top level modules:
+	Tx_Baud_Counter
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/UART_Tx.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module UART_Tx
+
+Top level modules:
+	UART_Tx
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_FIFO.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_FIFO.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_FIFO
+
+Top level modules:
+	Tx_FIFO
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Cont_Stat_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Tx_Cont_Stat_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Cont_Stat_Reg
+
+Top level modules:
+	Tx_Cont_Stat_Reg
 
 } {} {}}

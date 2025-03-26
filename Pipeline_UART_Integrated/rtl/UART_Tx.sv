@@ -1,15 +1,16 @@
 module UART_Tx(
-  input logic [31:0] addr,
-  input logic [13:0] baud_divisor,
-  input logic [7:0]  raw_data,
-  input logic        wr_en,
-  input logic        rd_en,
-  input logic        clk,
-  input logic        reset,
-  input logic        Tx_en,
-  input logic        Two_stop,
-  input logic        Odd_parity,
-  output logic       Tx_out);
+  input logic [31:0]  addr,
+  input logic [13:0]  baud_divisor,
+  input logic [7:0]   raw_data,
+  input logic         wr_en,
+  input logic         rd_en,
+  input logic         clk,
+  input logic         reset,
+  input logic         Tx_en,
+  input logic         Two_stop,
+  input logic         Odd_parity,
+  output logic [31:0] rdata, 
+  output logic        Tx_out);
 
 parameter INIT = 3'b000, CONFIGURED = 3'b001, SHIFT_LOAD = 3'b010, TX_START = 3'b011, 
 CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
@@ -37,6 +38,7 @@ logic [2:0] c_state;
 logic [2:0] n_state;
 
 // Signal Lines
+logic [31:0] mem [5:0];
 logic [13:0] baud_divisor_r;
 logic [13:0] baud_count;
 logic [13:0] baud_count_r;
@@ -289,5 +291,18 @@ always_comb begin
       Tx_out = 1'b1;
     end
 
+end
+
+always_comb begin
+// Reading Registers
+mem [0] = {24'b0, data};
+mem [1] = {29'b0, Odd_parity_r, Two_stop_r, Tx_en_r};
+mem [2] = {31'b0, control_status};
+mem [3] = {18'b0, baud_divisor_r};
+mem [4] = {18'b0, baud_count_r};
+mem [5] = {28'b0, bit_count_r};
+  if (rd_en) begin
+    rdata = mem[addr];
+  end
 end
 endmodule

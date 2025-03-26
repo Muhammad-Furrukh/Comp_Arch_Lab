@@ -1,9 +1,9 @@
 module UART_Tx(
   input logic [31:0] addr,
   input logic [13:0] baud_divisor,
-  input logic [7:0]  raw_data;
-  input logic        wr_en;
-  input logic        rd_en;
+  input logic [7:0]  raw_data,
+  input logic        wr_en,
+  input logic        rd_en,
   input logic        clk,
   input logic        rst_n,
   input logic        Tx_en,
@@ -39,30 +39,24 @@ logic [2:0] n_state;
 // Signal Lines
 logic [13:0] baud_divisor_r;
 logic [13:0] baud_count;
+logic [13:0] baud_count_r;
 logic [7:0]  data; 
 logic [7:0]  fifo_data;
 logic [3:0]  fifo_count_r;
 logic [3:0]  fifo_count_plus;
 logic [3:0]  fifo_count_sub;
 logic [3:0]  fifo_count;
+logic [3:0]  bit_count;
+logic [3:0]  bit_count_r;
 logic [1:0]  fifo_count_sel;
 logic        parity_bit;
-logic        bit_count;
 logic        Odd_parity_r;
 logic        Two_stop_r;
 logic        serial_out;
-logic        baud_configured
+logic        baud_configured;
+logic        baud_eq_or_reset;
+logic        bit_eq_or_reset;
 
-// Registers
-logic [13:0] Baud_Reg;
-logic [13:0] Baud_Counter;
-logic [10:0] Shift_Reg;
-logic [7:0]  Data_Reg;
-logic [7:0]  Tx_FIFO;
-logic [3:0]  Bit_Counter;
-logic [3:0]  FIFO_Count;
-logic [2:0]  Control_Reg;
-logic        Status_Reg;
 
 // Controller State Register
 always_ff @(posedge clk or posedge rst_n) begin
@@ -215,104 +209,69 @@ always_comb begin
 end
 
 // Data Register
-Tx_Data_Reg Tx_Data_Reg(.clk(clk), .reset(reset), .D(raw_data), .Q(data));
+Tx_Data_Reg Tx_Data_Reg(.clk(clk), .reset(reset), .raw_data(raw_data), .data(data), .addr(addr), .wr_en(wr_en));
 
 // Baud Divisor Register
-Tx_Baud_Reg Tx_Baud_Reg(.clk(clk), .reset(reset), .D(baud_divisor), .Q(baud_divisor_r));
+Tx_Baud_Reg Tx_Baud_Reg(.clk(clk), .reset(reset), .baud_divisor(baud_divisor), .baud_divisor_r(baud_divisor_r), 
+.addr(addr), .wr_en(wr_en));
 
 // Transmission FIFO
-Tx_FIFO Tx_FIFO(.clk(clk), .reset(reset), .data(data), .pointer(pointer), .fifo_load(.fifo_load),
+Tx_FIFO Tx_FIFO(.clk(clk), .reset(reset), .data(data), .pointer(fifo_count_sub), .fifo_load(fifo_load),
 .load_en(load_en), .fifo_data(fifo_data));
 
 // FIFO Count Register
-Tx_FIFO_Count_Reg Tx_FIFO_Count_Reg(.clk(.clk), .reset(reset), .fifo_count(fifo_count),
+Tx_FIFO_Count_Reg Tx_FIFO_Count_Reg(.clk(clk), .reset(reset), .fifo_count(fifo_count),
 .fifo_count_r(fifo_count_r));
 
 // Control and Status Register
-always_ff @(posedge clk or negedge rst_n) begin
-    if (!rst_n)
-      begin Control_Reg <= 3'b000; end
-    else if (!Tx_sel) begin
-        Control_Reg[0] <= Tx_en;
-        Control_Reg[1] <= Two_stop;
-        Control_Reg[2] <= Odd_parity;
-    end
-      
-end
-
-// Shift Register
-always_ff @(posedge clk or negedge rst_n) begin
-    if ((!rst_n) || shift_rst)
-      begin Shift_Reg <= 11'b11111111110; end
-    else if (shift_en && (!load_en))
-      begin Shift_Reg <= (Shift_Reg>>1); end
-    else if (load_en) begin
-      Shift_Reg[0] <= 1'b0;
-      Shift_Reg[1] <= fifo_data[0];
-      Shift_Reg[2] <= fifo_data[1];
-      Shift_Reg[3] <= fifo_data[2];
-      Shift_Reg[4] <= fifo_data[3];
-      Shift_Reg[5] <= fifo_data[4];
-      Shift_Reg[6] <= fifo_data[5];
-      Shift_Reg[7] <= fifo_data[6];
-      Shift_Reg[8] <= fifo_data[7];
-      Shift_Reg[9] <= parity_bit;
-      Shift_Reg[10] <= 1'b1;
-    end
-end
-
+Tx_Cont_Stat_Reg Tx_Cont_Stat_Reg(.clk(clk), .reset(reset), .addr(addr), .wr_en(wr_en), .Tx_en(Tx_en),
+.Two_stop(Two_stop), .Odd_parity(Odd_parity), .config_en(config_en), .Tx_en_r(Tx_en_r), .Two_stop_r(Two_stop_r),
+.Odd_parity_r(Odd_parity_r), .control_status(control_status));
 
 // Baud Counter
-always_ff @(posedge clk or negedge rst_n) begin
-    if ((!rst_n) || baud_eq)
-      begin Baud_Counter = 14'b00000000000000; end
-    else if (count_en)
-      begin Baud_Counter = Baud_Counter + 1; end
-end
+Tx_Baud_Counter Tx_Baud_Counter(.clk(clk), .reset(baud_eq_or_reset), .baud_count(baud_count), .count_en(count_en), 
+.baud_count_r(baud_count_r));
 
 // Bit Counter
-always_ff @(posedge clk or negedge rst_n) begin
-    if ((!rst_n) || bit_eq)
-      begin Bit_Counter = 4'h0; end
-    else if (baud_eq)
-      begin Bit_Counter = Bit_Counter + 1; end
-end
+Tx_Bit_Counter Tx_Bit_Counter(.clk(clk), .reset(bit_eq_or_reset), .bit_count(bit_count), .count_en(baud_eq), 
+.bit_count_r(bit_count_r));
+
+// Shift Register
+Tx_Shift_Reg Tx_Shift_Reg(.clk(clk), .reset(reset), .fifo_data(fifo_data), .parity_bit(parity_bit), 
+.shift_en(shift_en), .load_en(load_en), .serial_out(serial_out));
+
 
 always_comb begin
-    // Data register Output
-    data = Data_Reg;
-
-    // Tx FIFO Output
-    fifo_data = Tx_FIFO;
-
     // Parity Generator
     case(Odd_parity_r)
       1'b0: parity_bit = ^fifo_data;
       1'b1: parity_bit = ~(^fifo_data);
     endcase
 
-    // Shift register Output
-    serial_out = Shift_Reg[0];
+    // FIFO Counts
+    fifo_count_plus = fifo_count_r + 1;
+    fifo_count_sub = fifo_count_r - 1;
+    fifo_count_sel = {fifo_load, load_en};
+    case(fifo_count_sel)
+    2'b00: fifo_count = fifo_count_r;
+    2'b01: fifo_count = fifo_count_plus;
+    2'b10: fifo_count = fifo_count_sub;
+    default: fifo_count = fifo_count_r;
+    endcase
 
-    //FIFO_EMPTY Output
-    fifo_status = FIFO_EMPTY;
+    fifo_empty = (fifo_count_r == 0);
+    fifo_full = (fifo_count_r == 8);
 
-    // Control Register outputs
-    Tx_en_r = Control_Reg[0];
-    Two_stop_r = Control_Reg[1];
-    Odd_parity_r = Control_Reg[2];
+    // Baud Counts
+    baud_configured = (baud_divisor_r != 0);
 
-    // Baud Divisor Register output
-    baud_divisor_r = Baud_Reg;
+    baud_count = baud_count_r + 1;
 
-    // Baud Counter output
-    baud_count = Baud_Counter;
+    baud_eq = (baud_count_r == baud_divisor_r); 
 
-    // Baud equal to comparator output
-    baud_eq = (baud_count == baud_divisor_r); 
-
+    baud_eq_or_reset = baud_eq | reset;
     // Bit Counter Output
-    bit_count = Bit_Counter;
+    bit_count = bit_count_r + 1;
 
     // Bit equal to comparator
     if (Two_stop_r)
@@ -320,7 +279,15 @@ always_comb begin
     else
       begin bit_eq = (bit_count == 11); end
 
-    Tx_status = (bit_count != 0);
+    bit_eq_or_reset = bit_eq || reset;
+
+    // Tx Output
+    if (Tx_sel) begin
+      Tx_out = serial_out;
+    end
+    else begin
+      Tx_out = 1'b1;
+    end
 
 end
 endmodule

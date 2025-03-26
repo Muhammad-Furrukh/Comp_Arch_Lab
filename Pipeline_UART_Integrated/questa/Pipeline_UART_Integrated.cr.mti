@@ -1,0 +1,178 @@
+{D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package tb_sv_unit
+-- Importing package header_pkg
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_FIFO_Count_Reg
+
+Top level modules:
+	Tx_FIFO_Count_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module register_file
+
+Top level modules:
+	register_file
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module control_MW
+
+Top level modules:
+	control_MW
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Baud_Counter
+
+Top level modules:
+	Tx_Baud_Counter
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_FIFO
+
+Top level modules:
+	Tx_FIFO
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv} {2 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package PMCP_sv_unit
+-- Importing package header_pkg
+-- Compiling module PMCP
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv(177): (vlog-2182) 'wdata' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	PMCP
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Bit_Counter
+
+Top level modules:
+	Tx_Bit_Counter
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package control_DE_sv_unit
+-- Importing package header_pkg
+-- Compiling module control_DE
+
+Top level modules:
+	control_DE
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module instruction_memory
+
+Top level modules:
+	instruction_memory
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Baud_Reg
+
+Top level modules:
+	Tx_Baud_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package header_pkg
+
+Top level modules:
+	--none--
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Shift_Reg
+
+Top level modules:
+	Tx_Shift_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module instr_fetch_reg
+
+Top level modules:
+	instr_fetch_reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Cont_Stat_Reg
+
+Top level modules:
+	Tx_Cont_Stat_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module rdata_proc
+
+Top level modules:
+	rdata_proc
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module immediate_gen
+
+Top level modules:
+	immediate_gen
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module branch_cond
+
+Top level modules:
+	branch_cond
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module hazard_unit
+
+Top level modules:
+	hazard_unit
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module Tx_Data_Reg
+
+Top level modules:
+	Tx_Data_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package ALU_sv_unit
+-- Importing package header_pkg
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module data_memory
+
+Top level modules:
+	data_memory
+
+} {} {}}

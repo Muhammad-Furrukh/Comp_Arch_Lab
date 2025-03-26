@@ -1,53 +1,32 @@
-#include <stdint.h>
 
-// UART Register Definitions
+// UART Register Definitions (32-bit aligned)
 #define UART_BASE 0x80000200
 
-#define UART_DATA_REG      (*(volatile uint32_t *)(UART_BASE + 0x00))
-#define UART_CONTROL_REG   (*(volatile uint32_t *)(UART_BASE + 0x04))
-#define UART_STATUS_REG    (*(volatile uint32_t *)(UART_BASE + 0x08))
-#define UART_BAUD_REG      (*(volatile uint32_t *)(UART_BASE + 0x0C))
-#define UART_BITCOUNT_REG  (*(volatile uint32_t *)(UART_BASE + 0x14))
-
-// Control Register Bits
-#define TX_EN_BIT    (1 << 0)
-#define TWO_STOP_BIT (1 << 1)
-#define ODD_PARITY   (1 << 2)
-
-void uart_init(uint32_t baud_divisor) {
-    // Configure Baud Rate
-    UART_BAUD_REG = baud_divisor;
-
-    // Enable TX, Two stop bits, Odd parity
-    UART_CONTROL_REG = TX_EN_BIT | TWO_STOP_BIT | ODD_PARITY;
-
-    while ((UART_STATUS_REG & 0x1) == 0);
-}
-
-void uart_send_char(char c) {
-    UART_DATA_REG = (uint32_t)c;
-
-    for (volatile int i = 0; i < 100; i++);
-}
-
-void uart_send_string(const char *str) {
-    while (*str) {
-        uart_send_char(*str++);
-        
-        for (volatile int i = 0; i < 5000; i++);
-    }
-}
+#define UART_DATA_REG       (*(volatile int *)(UART_BASE + 0x00))
+#define UART_CONTROL_REG    (*(volatile int *)(UART_BASE + 0x04))
+#define UART_STATUS_REG     (*(volatile int *)(UART_BASE + 0x08))
+#define UART_BAUD_REG       (*(volatile int *)(UART_BASE + 0x0C))
+#define UART_BITCOUNT_REG   (*(volatile int *)(UART_BASE + 0x14))
 
 int main() {
-    uint32_t baud_divisor = 868;
+    int baud_divisor = 10417;
     
-    uart_init(baud_divisor);
-    uart_send_string("Hello from RISC-V!\n");
+    // Configure Baud Rate (14-bit value)
+    UART_BAUD_REG = baud_divisor;
 
-    // Optional: Echo test (if loopback implemented)
-    while (1) {
-        
-    }
+    // Enable TX with 2 stop bits and odd parity
+    UART_CONTROL_REG = 0x07;
+
+    // Wait until configuration is validated by hardware
+    while (UART_STATUS_REG == 0);
+
+    UART_DATA_REG = 'U';
+
+    UART_DATA_REG = 'A';
+
+    UART_DATA_REG = 'R';
+
+    UART_DATA_REG = 'T';
 
     return 0;
 }

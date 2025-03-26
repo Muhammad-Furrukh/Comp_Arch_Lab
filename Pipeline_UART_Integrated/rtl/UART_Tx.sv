@@ -67,7 +67,7 @@ Tx_Baud_Reg Tx_Baud_Reg(.clk(clk), .reset(reset), .baud_divisor(baud_divisor), .
 .addr(addr), .wr_en(wr_en));
 
 // Transmission FIFO
-Tx_FIFO Tx_FIFO(.clk(clk), .reset(reset), .data(data), .pointer(fifo_count_sub), .fifo_load(fifo_load),
+Tx_FIFO Tx_FIFO(.clk(clk), .reset(reset), .data(data), .pointer(fifo_count_r), .fifo_load(fifo_load),
 .load_en(load_en), .fifo_data(fifo_data));
 
 // FIFO Count Register
@@ -302,7 +302,7 @@ mem [3] = {18'b0, baud_divisor_r};
 mem [4] = {18'b0, baud_count_r};
 mem [5] = {28'b0, bit_count_r};
   if (rd_en) begin
-    rdata = mem[addr];
+    rdata = mem[addr/4];
   end
 end
 endmodule

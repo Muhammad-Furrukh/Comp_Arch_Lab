@@ -19,12 +19,12 @@ always_ff @(posedge clk) begin
     if (reset) begin
         CS_reg <= 8'h00;
     end
-    else if (config_en && (wr_en) && (addr == 32'b1)) begin
+    else if (config_en && (wr_en) && (addr == 32'h4)) begin
         CS_reg[0] <= Tx_en;
         CS_reg[1] <= Two_stop;
         CS_reg[2] <= Odd_parity;
     end
-    if ((wr_en) && (addr == 32'b1)) begin
+    if ((wr_en) && (addr == 32'h4)) begin
         CS_reg[4] <= 1'b1;
     end
 end

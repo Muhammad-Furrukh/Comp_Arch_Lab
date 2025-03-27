@@ -96,19 +96,19 @@ QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 Top level modules:
 	Tx_Baud_Reg
 
-} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv}
-QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
--- Compiling package header_pkg
-
-Top level modules:
-	--none--
-
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
 -- Compiling module Tx_Shift_Reg
 
 Top level modules:
 	Tx_Shift_Reg
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package header_pkg
+
+Top level modules:
+	--none--
 
 } {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv}
 QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021

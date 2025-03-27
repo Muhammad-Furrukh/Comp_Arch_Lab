@@ -6,6 +6,19 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -13,24 +26,23 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Simulation
+dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/UART_Tx/Simulation
 T_opt
-!s110 1743016000
-VASQm?gC8UmD<hj<=[=:>j2
+!s110 1743053744
+ViWmQjG1R<6P_AEgDAQ;n90
 04 2 4 work tb fast 0
-=1-c423605a1469-67e4503f-3a2-7300
+=21-c423605a1469-67e4e3b0-12d-7300
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.1;73
-R1
 vALU
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 DXx4 work 10 header_pkg 0 22 bNFOcR<D>h:9@gfKYB8701
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 DXx4 work 10 header_pkg 0 22 bNFOcR<D>h:9@gfKYB8701
 DXx4 work 11 ALU_sv_unit 0 22 nL3>fd=?c=bdNHK^Zb6;b0
-Z5 !s110 1743018731
-Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s110 1743053731
+Z5 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
@@ -38,25 +50,25 @@ r1
 I=1FYmmF9GdlekLcZ>c7_U2
 !s105 ALU_sv_unit
 S1
-Z7 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/questa
-Z8 w1739827336
-Z9 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv
-Z10 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv
-!i122 515
+Z6 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/questa
+Z7 w1739827336
+Z8 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv
+Z9 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv
+!i122 936
 L0 3 36
-Z11 OL;L;2021.1;73
+Z10 OL;L;2021.1;73
 31
-Z12 !s108 1743018731.000000
-Z13 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv|
-Z14 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv|
+Z11 !s108 1743053731.000000
+Z12 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv|
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/ALU.sv|
 !i113 0
-Z15 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
 n@a@l@u
 XALU_sv_unit
+R2
 R3
 R4
-R5
 VnL3>fd=?c=bdNHK^Zb6;b0
 r1
 !s85 0
@@ -65,51 +77,51 @@ r1
 InL3>fd=?c=bdNHK^Zb6;b0
 !i103 1
 S1
+R6
 R7
 R8
 R9
+!i122 936
+Z15 L0 1 0
 R10
-!i122 515
-Z16 L0 1 0
-R11
 31
+R11
 R12
 R13
-R14
 !i113 0
-R15
-R2
+R14
+R1
 n@a@l@u_sv_unit
 vbranch_cond
-R3
-R5
+R2
+R4
 !i10b 1
 !s100 cB9Z1dBCn3fb3:W9aPObS3
 IHDz3AA9>lZ`nZoX:Y9TM01
 S1
-R7
+R6
 w1722365974
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv
-!i122 516
+!i122 937
 L0 1 56
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R12
+R11
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/branch_cond.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vcontrol_DE
+R2
 R3
-R4
 DXx4 work 18 control_DE_sv_unit 0 22 7TEj9jc@`Tgeho=2=@nQS2
+R4
 R5
-R6
 r1
 !s85 0
 !i10b 1
@@ -117,25 +129,25 @@ r1
 I1;1SgaXI`:W6=d3R0alQ80
 !s105 control_DE_sv_unit
 S1
-R7
-Z17 w1741038932
-Z18 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv
-Z19 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv
-!i122 517
+R6
+Z16 w1741038932
+Z17 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv
+Z18 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv
+!i122 938
 L0 3 136
-R11
+R10
 31
-R12
-Z20 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv|
-Z21 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv|
+R11
+Z19 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_DE.sv|
 !i113 0
-R15
-R2
+R14
+R1
 ncontrol_@d@e
 Xcontrol_DE_sv_unit
+R2
 R3
 R4
-R5
 V7TEj9jc@`Tgeho=2=@nQS2
 r1
 !s85 0
@@ -144,221 +156,221 @@ r1
 I7TEj9jc@`Tgeho=2=@nQS2
 !i103 1
 S1
-R7
+R6
+R16
 R17
 R18
-R19
-!i122 517
-R16
-R11
-31
-R12
-R20
-R21
-!i113 0
+!i122 938
 R15
-R2
+R10
+31
+R11
+R19
+R20
+!i113 0
+R14
+R1
 ncontrol_@d@e_sv_unit
 vcontrol_MW
-R3
-R5
+R2
+R4
 !i10b 1
 !s100 7aA:aK]ogGnlPmTNNQk3;2
 IO@BQ3zAW[MVFL^i?>TT:<1
 S1
-R7
+R6
 w1741045286
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv
-!i122 518
+!i122 939
 L0 1 21
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R12
+R11
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/control_MW.sv|
 !i113 0
-R15
-R2
+R14
+R1
 ncontrol_@m@w
 vdata_memory
-R3
-R5
+R2
+R4
 !i10b 1
 !s100 F>RDz207_d2VAnD=n9D;E2
 IicUEk5zITKa63bmiZanGR1
 S1
-R7
+R6
 w1742961338
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv
-!i122 519
+!i122 940
 L0 1 37
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R12
+R11
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/data_memory.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vhazard_unit
-R3
-R5
+R2
+Z21 !s110 1743053732
 !i10b 1
 !s100 9`g_UOjCBIXHR8]Jzg2DO1
 I8PFe?Se[_T5XNHTOHCLzn3
 S1
-R7
+R6
 w1741422686
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv
-!i122 520
+!i122 941
 L0 1 45
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R12
+R11
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/hazard_unit.sv|
 !i113 0
-R15
-R2
+R14
+R1
 Xheader_pkg
-R3
-Z22 !s110 1743018733
+R2
+Z22 !s110 1743053733
 !i10b 1
 !s100 ngGaW2UMl@fMECR_f@B6m3
 IbNFOcR<D>h:9@gfKYB8701
 S1
-R7
+R6
 w1739827284
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv
-!i122 538
-R16
+!i122 959
+R15
 VbNFOcR<D>h:9@gfKYB8701
-R11
+R10
 r1
 !s85 0
 31
-Z23 !s108 1743018733.000000
+Z23 !s108 1743053733.000000
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/includes/header.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vimmediate_gen
-R3
-R5
+R2
+R21
 !i10b 1
 !s100 XlXe[V:<[i>0iKaHSoZhR1
 IROVBVOf_?@=aoJ]=XbR5]1
 S1
-R7
+R6
 w1722385958
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv
-!i122 521
+!i122 942
 L0 1 22
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R12
+Z24 !s108 1743053732.000000
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/immediate_gen.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vinstr_fetch_reg
-R3
-R5
+R2
+R21
 !i10b 1
 !s100 O7WH=A<L36lhCgOliV3mf3
 IMbYV0QVLTmcA;ZB0`@kIM0
 S1
-R7
+R6
 w1741419938
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv
-!i122 522
-Z24 L0 1 16
-R6
-R11
+!i122 943
+Z25 L0 1 16
+R5
+R10
 r1
 !s85 0
 31
-R12
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instr_fetch_reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vinstruction_memory
-R3
-R5
+R2
+R21
 !i10b 1
 !s100 0d^VH]3J9C8N]=1mB_WiJ2
 I9K59WYko^dO19Td8^`WLn3
 S1
-R7
+R6
 w1742968789
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv
-!i122 523
-R24
-R6
-R11
+!i122 944
+R25
+R5
+R10
 r1
 !s85 0
 31
-R12
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/instruction_memory.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vPC
-R3
-Z25 !s110 1743018732
+R2
+R21
 !i10b 1
 !s100 aIZn;JLAke2MCQbPSS5C=1
 IbVkeR^II_Fm=KK81lYPFT0
 S1
-R7
+R6
 w1722472138
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv
-!i122 524
+!i122 945
 L0 1 10
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-Z26 !s108 1743018732.000000
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PC.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@p@c
 vPMCP
+R2
 R3
-R4
 DXx4 work 12 PMCP_sv_unit 0 22 caLP5lhS@d@<^[0Rn^zG92
-R25
-R6
+R21
+R5
 r1
 !s85 0
 !i10b 1
@@ -366,25 +378,25 @@ r1
 Idc^9dmzWO`<Nj^4Ah_f6H0
 !s105 PMCP_sv_unit
 S1
-R7
-Z27 w1742965277
-Z28 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv
-Z29 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv
-!i122 525
+R6
+Z26 w1742965277
+Z27 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv
+Z28 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv
+!i122 946
 L0 3 224
-R11
+R10
 31
-R26
-Z30 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv|
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv|
+R24
+Z29 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv|
+Z30 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/PMCP.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@p@m@c@p
 XPMCP_sv_unit
+R2
 R3
-R4
-R25
+R21
 VcaLP5lhS@d@<^[0Rn^zG92
 r1
 !s85 0
@@ -393,99 +405,99 @@ r1
 IcaLP5lhS@d@<^[0Rn^zG92
 !i103 1
 S1
-R7
+R6
+R26
 R27
 R28
-R29
-!i122 525
-R16
-R11
-31
-R26
-R30
-R31
-!i113 0
+!i122 946
 R15
-R2
+R10
+31
+R24
+R29
+R30
+!i113 0
+R14
+R1
 n@p@m@c@p_sv_unit
 vrdata_proc
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 ?KG0_VU5Cd;bCUciGKfV^3
 IPhiWRd@zBnboKCiE=63fG3
 S1
-R7
+R6
 w1742964810
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv
-!i122 526
+!i122 947
 L0 1 28
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/rdata_proc.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vregister
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 c[a0^Be?MNF:DzhCYZO581
 Ig>7CR6;6UBK@TLG=3LoM63
 S1
-R7
+R6
 w1741035500
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv
-!i122 527
+!i122 948
 L0 1 13
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vregister_file
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 `_JnhOFa9ZD^0FE6=XzFR2
 IVBjO@=ROM=QDFJNe3bzgm2
 S1
-R7
+R6
 w1741046522
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv
-!i122 528
+!i122 949
 L0 1 89
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/register_file.sv|
 !i113 0
-R15
-R2
+R14
+R1
 vtb
+R2
 R3
-R4
 DXx4 work 10 tb_sv_unit 0 22 T4b`LL0TiE47=eeXIcj5;1
 R22
-R6
+R5
 r1
 !s85 0
 !i10b 1
@@ -493,23 +505,23 @@ r1
 IZgafDDeX^mS]OJ4>9k1NY2
 !s105 tb_sv_unit
 S1
-R7
-Z32 w1741041610
-Z33 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv
-Z34 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv
-!i122 539
+R6
+Z31 w1741041610
+Z32 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv
+Z33 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv
+!i122 960
 L0 3 22
-R11
+R10
 31
 R23
-!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv|
+Z34 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv|
 Z35 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv|
 !i113 0
-R15
-R2
+R14
+R1
 Xtb_sv_unit
+R2
 R3
-R4
 R22
 VT4b`LL0TiE47=eeXIcj5;1
 r1
@@ -519,235 +531,235 @@ r1
 IT4b`LL0TiE47=eeXIcj5;1
 !i103 1
 S1
-R7
+R6
+R31
 R32
 R33
-R34
-!i122 539
-R16
-R11
+!i122 960
+R15
+R10
 31
 R23
-Z36 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/benches/tb.sv|
+R34
 R35
 !i113 0
-R15
-R2
+R14
+R1
 vTx_Baud_Counter
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 ^QW`bcF?e3<7MJS>gRL8M3
 I13BoFzB^GB]RSUi0=LHLD1
 S1
-R7
+R6
 w1742954960
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv
-!i122 529
-Z37 L0 1 15
-R6
-R11
+!i122 950
+Z36 L0 1 15
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Counter.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@baud_@counter
 vTx_Baud_Reg
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 MWQR>HR3B<ko7XO?azQ=M3
 Im`o0ICU5mm4Zl;]7aOOX82
 S1
-R7
+R6
 w1743014950
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv
-!i122 530
+!i122 951
 L0 1 17
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Baud_Reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@baud_@reg
 vTx_Bit_Counter
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 YmES03MmZ`96F7J>XJXFO1
 IgVO^?:ZeYAjg>eRjQU??l3
 S1
-R7
+R6
 w1742954985
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv
-!i122 531
-R37
-R6
-R11
+!i122 952
+R36
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Bit_Counter.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@bit_@counter
 vTx_Cont_Stat_Reg
-R3
-R25
+R2
+R21
 !i10b 1
-!s100 hG:?JMA<d>YRD<lJY9UhP3
-I[cW_6GhU0UN;H9XkaRU2n1
+!s100 Qg5Oa5@fT2LLaJj>jjba92
+I1YYedP?>Jo4cC72E;Sm6J0
 S1
-R7
-w1742972791
+R6
+w1743030128
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv
-!i122 532
-L0 1 39
-R6
-R11
+!i122 953
+L0 1 38
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Cont_Stat_Reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@cont_@stat_@reg
 vTx_Data_Reg
-R3
-R25
+R2
+R21
 !i10b 1
 !s100 N2MFmS1Wzo[QTMaA8h?Tf2
 IRMHfiWCCbV_2SUe:P181P1
 S1
-R7
+R6
 w1742949753
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv
-!i122 533
-R24
-R6
-R11
+!i122 954
+R25
+R5
+R10
 r1
 !s85 0
 31
-R26
+R24
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Data_Reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@data_@reg
 vTx_FIFO
-R3
-R25
+R2
+R22
 !i10b 1
 !s100 7e]624<W?iYdHhO<8zF>n1
 I>I]f]L0XGhMHW>Sa5m7dN2
 S1
-R7
+R6
 w1742940234
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv
-!i122 534
+!i122 955
 L0 1 34
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R23
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@f@i@f@o
 vTx_FIFO_Count_Reg
-R3
-R25
+R2
+R22
 !i10b 1
 !s100 a9OG9Z4;gH<g]>e<85eo_3
 I9Q8h;]P[ccl;FEAb2iZ531
 S1
-R7
+R6
 w1742940996
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv
-!i122 535
+!i122 956
 L0 1 14
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R23
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_FIFO_Count_Reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@f@i@f@o_@count_@reg
 vTx_Shift_Reg
-R3
+R2
 R22
 !i10b 1
-!s100 Am=3Wf5TL<1S?Q`fED>>81
-I6[JHg=_2HD8HGPodF=V7F3
+!s100 iE@I=BSh2mO4>z1FIOM1@2
+I`3`GV>P3>W4kAP6R1FQ[T3
 S1
-R7
-w1742955583
+R6
+w1743035319
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv
-!i122 536
+!i122 957
 L0 1 43
-R6
-R11
+R5
+R10
 r1
 !s85 0
 31
-R26
+R23
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/Tx_Shift_Reg.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@tx_@shift_@reg
 vUART_Tx
-R3
+R2
 R22
 !i10b 1
-!s100 FI`YfzO`V71f<TeWPK^702
-IHN^mWaM2;hFGZ1Y14<a]E2
+!s100 ZP[VUCL[iLHD@TkD]iT763
+ITR80=FJXhDcL7eTm;U:LE3
 S1
-R7
-w1743015974
+R6
+w1743053726
 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/UART_Tx.sv
 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/UART_Tx.sv
-!i122 537
-L0 1 308
-R6
-R11
+!i122 958
+L0 1 294
+R5
+R10
 r1
 !s85 0
 31
@@ -755,6 +767,6 @@ R23
 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/UART_Tx.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/rtl/UART_Tx.sv|
 !i113 0
-R15
-R2
+R14
+R1
 n@u@a@r@t_@tx

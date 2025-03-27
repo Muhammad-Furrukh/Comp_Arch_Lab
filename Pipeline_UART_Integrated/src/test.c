@@ -9,7 +9,7 @@
 #define UART_BITCOUNT_REG   (*(volatile int *)(UART_BASE + 0x14))
 
 int main() {
-    int baud_divisor = 10417;
+    int baud_divisor = 3;
     
     // Configure Baud Rate (14-bit value)
     UART_BAUD_REG = baud_divisor;
@@ -28,5 +28,22 @@ int main() {
 
     UART_DATA_REG = 'T';
 
+    UART_DATA_REG = '\r';
+
+    UART_DATA_REG = '\n';
+
+    UART_DATA_REG = 'H';
+
+    UART_DATA_REG = 'E';
+
+    UART_DATA_REG = 'L';
+
+    UART_DATA_REG = 'L';
+
+    UART_DATA_REG = 'O';
+
+    UART_DATA_REG = '\r';
+
+    UART_DATA_REG = '\n';
     return 0;
 }

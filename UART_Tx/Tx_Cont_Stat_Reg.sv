@@ -3,8 +3,7 @@ module Tx_Cont_Stat_Reg(
     input logic        reset,
     input logic        Tx_en,
     input logic        Two_stop,
-    input logic        Odd_parity,
-    input logic        config_en, 
+    input logic        Odd_parity, 
     input logic        wr_en,
     input logic [31:0] addr,
     output logic       Tx_en_r,
@@ -19,12 +18,12 @@ always_ff @(posedge clk) begin
     if (reset) begin
         CS_reg <= 8'h00;
     end
-    else if (config_en) begin
+    else if ((wr_en) && (addr == 32'h4)) begin
         CS_reg[0] <= Tx_en;
         CS_reg[1] <= Two_stop;
         CS_reg[2] <= Odd_parity;
     end
-    if ((wr_en) && (addr == 32'b1)) begin
+    if ((wr_en) && (addr == 32'h4)) begin
         CS_reg[4] <= 1'b1;
     end
 end

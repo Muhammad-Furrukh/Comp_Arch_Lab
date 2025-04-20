@@ -13,7 +13,7 @@ module UART_Tx(
   output logic        Tx_out);
 
 parameter INIT = 3'b000, CONFIGURED = 3'b001, SHIFT_LOAD = 3'b010, TX_START = 3'b011, 
-CHANGE_BIT = 3'b100, CONT_BIT = 3'b101;
+CHANGE_BIT = 3'b100, CONT_BIT = 3'b101, TX_STOP = 3'b110;
 
 
 // Controller Output Signals
@@ -131,22 +131,28 @@ always_comb begin
           n_state = TX_START; end
     end
     CHANGE_BIT: begin
-      if ((bit_eq) && (!fifo_empty)) begin 
-          n_state = TX_START; end
+      if (bit_eq) begin
+        n_state = TX_STOP; end
       else begin
           n_state = CONT_BIT; end
     end
     CONT_BIT: begin
         if ((!bit_eq) && (baud_eq)) begin 
           n_state = CHANGE_BIT; end
-        else if ((bit_eq) && (!fifo_empty)) begin 
-          n_state = TX_START; end
-        else if ((bit_eq) && (fifo_empty) && (!Tx_en)) begin 
-          n_state = INIT; end
-        else if ((bit_eq) && (fifo_empty) && (Tx_en)) begin 
-          n_state = SHIFT_LOAD; end
+        else if (bit_eq) begin 
+          n_state = TX_STOP; end
         else begin 
           n_state = CONT_BIT; end
+    end
+    TX_STOP: begin
+        if ((baud_eq) && (!fifo_empty)) begin 
+          n_state = TX_START; end
+        else if ((baud_eq) && (fifo_empty) && (!Tx_en)) begin 
+          n_state = INIT; end
+        else if ((baud_eq) && (fifo_empty) && (Tx_en)) begin 
+          n_state = SHIFT_LOAD; end
+        else begin
+          n_state = TX_STOP; end
     end
     default: n_state = INIT;
   endcase
@@ -167,7 +173,7 @@ always_comb begin
             count_en = 0; load_en = 0; Tx_sel = 0;
         end
         else if ((!fifo_empty)) begin
-            count_en = 1; load_en = 1; Tx_sel = 0;
+            count_en = 0; load_en = 1; Tx_sel = 0;
         end
         else begin
             count_en = 0; load_en = 0; Tx_sel = 0;
@@ -184,20 +190,12 @@ always_comb begin
     end
 
     CHANGE_BIT: begin
-        if ((bit_eq) && (!fifo_empty)) begin 
-            count_en = 1; shift_en = 0; load_en = 1; Tx_sel = 1;
-        end
-        else begin
-            count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1;
-        end
+        count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1;
     end
     CONT_BIT: begin
-        if ((bit_eq) && (!fifo_empty)) begin
-            count_en = 1; shift_en = 0; load_en = 1; Tx_sel = 1; 
-        end
-        else if ((bit_eq) && (fifo_empty)) begin
-            count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; 
-        end
+        if (bit_eq) begin
+            count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; 
+        end 
         else if ((!bit_eq) && (baud_eq)) begin
             count_en = 1; shift_en = 1; load_en = 0; Tx_sel = 1; 
         end
@@ -205,6 +203,14 @@ always_comb begin
             count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; 
         end
     end
+    TX_STOP: begin
+        if ((baud_eq) && (!fifo_empty)) begin 
+            count_en = 0; shift_en = 0; load_en = 1; Tx_sel = 0; end
+        else if ((baud_eq) && (fifo_empty)) begin
+            count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; end
+        else begin
+            count_en = 1; shift_en = 0; load_en = 0; Tx_sel = 1; end
+    end 
     default: begin count_en = 0; shift_en = 0; load_en = 0; Tx_sel = 0; end
   endcase
 
@@ -263,9 +269,9 @@ always_comb begin
 
     // Bit equal to comparator
     if (Two_stop_r)
-      begin bit_eq = (bit_count == 11); end
+      begin bit_eq = (bit_count == 12); end
     else
-      begin bit_eq = (bit_count == 10); end
+      begin bit_eq = (bit_count == 11); end
 
     bit_eq_or_reset = bit_eq || reset;
 

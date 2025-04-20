@@ -1,0 +1,368 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Mar 27 13:39:18 2025
+| Host         : DESKTOP-EODFDLH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file PMCP_control_sets_placed.rpt
+| Design       : PMCP
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   301 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|    16+ |          298 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             384 |           92 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             510 |           93 |
+| Yes          | No                    | No                     |            6080 |         1734 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              98 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+-------------------------------------+------------------------------------------+------------------+----------------+
+|             Clock Signal             |            Enable Signal            |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++--------------------------------------+-------------------------------------+------------------------------------------+------------------+----------------+
+|  UART_Tx/Tx_FIFO_Count_Reg/fifo_load |                                     | control_MW/data_reg[0][0]                |                1 |              2 |
+|  IR_DE/E[0]                          |                                     |                                          |                3 |              6 |
+|  clk_IBUF_BUFG                       | UART_Tx/Tx_Baud_Counter/CO[0]       | UART_Tx/Tx_Bit_Counter/bit_eq_or_reset   |                2 |              8 |
+|  clk_IBUF_BUFG                       |                                     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[93][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[97][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[98][7][0]        |                                          |                4 |             16 |
+|  clk_IBUF_BUFG                       | UART_Tx/Tx_FIFO_Count_Reg/fifo      |                                          |                1 |             16 |
+|  clk_IBUF_BUFG                       | control_MW/data_reg[0][0]           | reset_IBUF                               |                1 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[96][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/E[0]                     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[0][7]_0[0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[100][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[101][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[102][7]_0[0]     |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[109][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[112][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[105][7]_1[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[111][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[103][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[108][7][0]       |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[104][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[10][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[107][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[106][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[110][7]_1[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[113][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[116][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[118][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[114][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[115][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[11][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[120][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[119][7]_0[0]     |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[117][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[125][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[127][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[126][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[128][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[122][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[124][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[121][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[123][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[131][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[133][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[135][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[134][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[136][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[130][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[129][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[132][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[12][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[141][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[143][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[144][7]_1[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[137][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[139][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[13][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[140][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[142][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[138][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[14][7]_0[0]      |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[150][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[146][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[147][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[148][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[145][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[149][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[157][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[159][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[155][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[158][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[153][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[151][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[152][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[154][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[156][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[15][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[165][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[164][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[163][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[160][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[161][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[162][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[168][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[171][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[169][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[16][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[170][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[166][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[167][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[181][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[176][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[17][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[172][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[174][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[177][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[178][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[173][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[179][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[175][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[180][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[183][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[182][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[186][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[189][7]_1[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[18][7][0]        |                                          |                8 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[190][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[192][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[191][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[185][7]_1[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[184][7]_1[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[187][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[193][7]_1[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[188][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[196][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[197][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[199][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[194][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[19][7]_1[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[201][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[200][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[195][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[198][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[202][7][0]       |                                          |                8 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[1][7][0]         |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[208][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[20][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[204][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[206][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[207][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[205][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[210][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[211][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[203][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[209][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[212][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[213][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[21][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[220][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[214][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[218][7][0]       |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[221][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[215][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[219][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[217][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[216][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[227][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[229][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[224][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[222][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[223][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[22][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[230][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[231][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[225][7]_0[0]     |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[226][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[228][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[234][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[23][7][0]        |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[235][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[233][7]_0[0]     |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[236][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[238][7]_0[0]     |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[232][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[237][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[239][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[242][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[247][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[244][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[248][7][0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[245][7]_0[0]     |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[246][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[240][7]_0[0]     |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[243][7][0]       |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[241][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[254][7]_0[0]     |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[26][7][0]        |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[250][7][0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[27][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[251][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[249][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[24][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[252][7]_0[0]     |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[255][7][0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[25][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[28][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[32][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[30][7][0]        |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[31][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[2][7]_0[0]       |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[29][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[34][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[41][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[42][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[36][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[38][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[39][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[35][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[37][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[33][7]_0[0]      |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[3][7][0]         |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[40][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[46][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[44][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[45][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[48][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[49][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[47][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[43][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[55][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[56][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[50][7]_1[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[52][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[4][7]_0[0]       |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[53][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[54][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[57][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[58][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[51][7]_0[0]      |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[59][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[61][7]_0[0]      |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[62][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[63][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[64][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[66][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[65][7][0]        |                                          |                2 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[5][7][0]         |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[60][7]_1[0]      |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[6][7]_0[0]       |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[71][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[68][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[72][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[67][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[73][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[70][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[75][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[74][7][0]        |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[77][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[69][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[76][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[80][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[79][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[81][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[83][7]_0[0]      |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[78][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[82][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[7][7]_0[0]       |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[84][7][0]        |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[85][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[8][7]_0[0]       |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[90][7][0]        |                                          |                7 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[86][7][0]        |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[91][7]_0[0]      |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[92][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[89][7]_1[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[87][7]_0[0]      |                                          |                3 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[88][7][0]        |                                          |                4 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[99][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[94][7]_0[0]      |                                          |                5 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[95][7]_0[0]      |                                          |                6 |             16 |
+| ~clk_IBUF_BUFG                       | control_MW/mem_reg[9][7]_0[0]       |                                          |                5 |             16 |
+|  clk_IBUF_BUFG                       | UART_Tx/Tx_Bit_Counter/E[0]         | reset_IBUF                               |                2 |             18 |
+|  clk_IBUF_BUFG                       | control_MW/baud_divisor_r_reg[0][0] | reset_IBUF                               |                5 |             28 |
+|  clk_IBUF_BUFG                       | UART_Tx/Tx_Bit_Counter/count_en     | UART_Tx/Tx_Baud_Counter/baud_eq_or_reset |                4 |             28 |
+|  rd_en_MW_BUFG                       |                                     |                                          |                7 |             28 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[16][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[22][31][0]      |                                          |               15 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[24][31][0]      |                                          |               10 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[1][31][0]       |                                          |               11 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[26][31][0]      |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[30][31][0]      |                                          |               20 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[7][31][0]       |                                          |               19 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[21][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[8][31][0]       |                                          |               25 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[9][31][0]       |                                          |               26 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[17][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[13][31][0]      |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[18][31][0]      |                                          |               14 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[19][31][0]      |                                          |               16 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[5][31][0]       |                                          |               14 |             64 |
+|  uart_addr_off0_BUFG                 |                                     |                                          |                9 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[6][31][0]       |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[12][31][0]      |                                          |               19 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[23][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[25][31][0]      |                                          |               10 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[27][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/E[0]                          |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[10][31][0]      |                                          |               12 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[20][31][0]      |                                          |               10 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[29][31][0]      |                                          |               18 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[2][31][0]       |                                          |               11 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[3][31][0]       |                                          |               16 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[11][31][0]      |                                          |               20 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[4][31][0]       |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[14][31][0]      |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[15][31][0]      |                                          |               13 |             64 |
+|  n_0_11444_BUFG                      |                                     |                                          |               13 |             64 |
+| ~clk_IBUF_BUFG                       | IR_MW/registers_reg[28][31][0]      |                                          |               12 |             64 |
+|  data_addr_off0_BUFG                 |                                     |                                          |               55 |            206 |
+|  clk_IBUF_BUFG                       |                                     | reset_IBUF                               |               92 |            508 |
++--------------------------------------+-------------------------------------+------------------------------------------+------------------+----------------+
+
+

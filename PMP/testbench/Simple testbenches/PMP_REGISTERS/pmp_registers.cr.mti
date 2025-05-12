@@ -1,0 +1,26 @@
+{D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package cep_define
+
+Top level modules:
+	--none--
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package pmp_registers_tb_sv_unit
+-- Importing package cep_define
+-- Compiling module pmp_registers_tb
+
+Top level modules:
+	pmp_registers_tb
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling package pmp_registers_sv_unit
+-- Importing package cep_define
+-- Compiling module pmp_registers
+
+Top level modules:
+	pmp_registers
+
+} {} {}}

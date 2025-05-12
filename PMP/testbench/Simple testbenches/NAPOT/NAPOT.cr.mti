@@ -1,0 +1,20 @@
+{D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv} {2 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module napot_tb
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv(58): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv(72): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv(86): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv(100): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv(115): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	napot_tb
+
+} {} {}} {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module napot
+
+Top level modules:
+	napot
+
+} {} {}}

@@ -1,0 +1,158 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/questasim64_2021.1/examples
+T_opt
+!s110 1746473671
+VdH9`UiBnZMN;M37noS;Ta3
+04 16 4 work pmp_registers_tb fast 0
+=7-c423605a1469-681912c7-265-7ae0
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+Xcep_define
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1746473664
+!i10b 1
+!s100 go:_f]9jbFM0z;5AXk;@P2
+I<;onN;N^jT9dl6bAZzdNS3
+S1
+Z4 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/PMP_REGISTERS
+w1745873078
+8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv
+FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv
+!i122 32
+Z5 L0 1 0
+V<;onN;N^jT9dl6bAZzdNS3
+Z6 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z7 !s108 1746473664.000000
+!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vpmp_registers
+R2
+Z9 DXx4 work 10 cep_define 0 22 <;onN;N^jT9dl6bAZzdNS3
+DXx4 work 21 pmp_registers_sv_unit 0 22 6PgAkSLfk3eRUBVWc:Ib[3
+R3
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+!i10b 1
+!s100 chcP<9bS167bceZ=3JED`0
+IzFW6cAahgWHH@1ADQThK^2
+!s105 pmp_registers_sv_unit
+S1
+R4
+Z11 w1746473304
+Z12 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv
+Z13 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv
+!i122 31
+L0 2 156
+R6
+31
+R7
+Z14 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/pmp_registers.sv|
+!i113 0
+R8
+R1
+Xpmp_registers_sv_unit
+R2
+R9
+R3
+V6PgAkSLfk3eRUBVWc:Ib[3
+r1
+!s85 0
+!i10b 1
+!s100 dZi`DKH<l7I<@OF8nBVYT2
+I6PgAkSLfk3eRUBVWc:Ib[3
+!i103 1
+S1
+R4
+R11
+R12
+R13
+!i122 31
+R5
+R6
+31
+R7
+R14
+R15
+!i113 0
+R8
+R1
+vpmp_registers_tb
+R2
+R9
+DXx4 work 24 pmp_registers_tb_sv_unit 0 22 aZj@dEbWUDG1=4h4bJP3P1
+R3
+R10
+r1
+!s85 0
+!i10b 1
+!s100 _=dbRYOma;A_>2af87T8Z0
+I54^7Bf2NYaJGY<Bj=MaG@0
+!s105 pmp_registers_tb_sv_unit
+S1
+R4
+Z16 w1746473640
+Z17 8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv
+Z18 FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv
+!i122 30
+L0 2 90
+R6
+31
+R7
+Z19 !s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv|
+Z20 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/Simple testbenches/pmp_registers_tb.sv|
+!i113 0
+R8
+R1
+Xpmp_registers_tb_sv_unit
+R2
+R9
+R3
+VaZj@dEbWUDG1=4h4bJP3P1
+r1
+!s85 0
+!i10b 1
+!s100 JaGSTA6zeEll9NlGMlmh73
+IaZj@dEbWUDG1=4h4bJP3P1
+!i103 1
+S1
+R4
+R16
+R17
+R18
+!i122 30
+R5
+R6
+31
+R7
+R19
+R20
+!i113 0
+R8
+R1

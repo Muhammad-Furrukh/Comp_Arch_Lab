@@ -1,0 +1,106 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/Pipeline_UART_Integrated/questa
+T_opt
+!s110 1746468786
+V6P?`CaSTz_ddka_:`B?i:3
+04 8 4 work napot_tb fast 0
+=14-c423605a1469-6818ffb2-23-6374
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+Xcep_define
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1745902493
+!i10b 1
+!s100 go:_f]9jbFM0z;5AXk;@P2
+I<;onN;N^jT9dl6bAZzdNS3
+S1
+Z3 dD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/NAPOT
+w1745873078
+8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv
+FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv
+!i122 1
+L0 1 0
+V<;onN;N^jT9dl6bAZzdNS3
+Z4 OL;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1745902493.000000
+!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/defines/cep_define.sv|
+!i113 0
+Z5 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vnapot
+R2
+Z6 !s110 1746468773
+!i10b 1
+!s100 mRlXlMKLF6=j<^h835<`>3
+I@83YC`dz0Q_9gLXig5X;I2
+S1
+R3
+w1746468766
+8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv
+FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv
+!i122 34
+L0 1 62
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+R4
+r1
+!s85 0
+31
+Z8 !s108 1746468773.000000
+!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/rtl/napot.sv|
+!i113 0
+R5
+R1
+vnapot_tb
+R2
+R6
+!i10b 1
+!s100 8mi5E8Aabm71LBhBIda`23
+I_18Vl`gEbcN4Al:<BG;z11
+S1
+R3
+w1746468513
+8D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv
+FD:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv
+!i122 33
+L0 1 133
+R7
+R4
+r1
+!s85 0
+31
+R8
+!s107 D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Documents/UET Courses/6th Semester/Computer Architecture/Lab/PMP/testbench/napot_tb.sv|
+!i113 0
+R5
+R1

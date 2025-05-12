@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon May 12 21:49:28 2025
+# Process ID: 19996
+# Current directory: D:/Documents/UET_Courses/6th_Semester/Computer_Architecture/Lab/PMP/Vivado/PMP/PMP.runs/impl_1
+# Command line: vivado.exe -log pmp.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pmp.tcl -notrace
+# Log file: D:/Documents/UET_Courses/6th_Semester/Computer_Architecture/Lab/PMP/Vivado/PMP/PMP.runs/impl_1/pmp.vdi
+# Journal file: D:/Documents/UET_Courses/6th_Semester/Computer_Architecture/Lab/PMP/Vivado/PMP/PMP.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source pmp.tcl -notrace

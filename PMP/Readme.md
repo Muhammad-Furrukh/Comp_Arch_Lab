@@ -124,23 +124,16 @@ parameter CFG_REGS = 4;          // Number of configuration registers
 parameter ADDR_WIDTH = 32;       // Address bus width
 ```
 
-## Testing
-1. Simple Testbench:
+## Testing Strategy
+1. **Simple Testbench**:
+   - Basic read/write tests
+   - Permission checks for each privilege mode
+   - Edge case verification
 
-- Basic read/write tests
-
-- Permission checks for each privilege mode
-
-- Edge case verification
-
-2. Self-Driving Testbench:
-
-- Randomized input generation
-
-- Automatic result checking
-
-- Coverage collection
-
-- Stress testing with back-to-back operations
+2. **Self-Driving Testbench**:
+   - Randomized input generation
+   - Automatic result checking
+   - Coverage collection
+   - Stress testing with back-to-back operations
 
 For questions or issues, please open an issue in the GitHub repository.

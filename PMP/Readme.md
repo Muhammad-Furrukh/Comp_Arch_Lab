@@ -16,18 +16,18 @@ This repository contains a Verilog implementation of a standalone RISC-V Physica
 - [Testing Strategy](#testing-strategy)
 
 ## Directory Structure
-PMP/
-├── defines/ # Package definitions
-│ └── pkg.sv # PMP package with parameters and types
-├── rtl/ # RTL implementation
-│ └── pmp.sv # Main PMP module
-└── testbench/ # Verification environment
-├── simple_tb/ # Basic testbench
-│ └── tb.sv # Simple test cases
-└── self_driving_tb/ # Advanced testbench
-├── tb.sv # Self-checking testbench
-├── c.bat # Simulation script
-└── clean.bat # Cleanup script
+    PMP/
+    ├── defines/ # Package definitions
+    │ └── pkg.sv # PMP package with parameters and types
+    ├── rtl/ # RTL implementation
+    │ └── pmp.sv # Main PMP module
+    └── testbench/ # Verification environment
+    ├── simple_tb/ # Basic testbench
+    │ └── tb.sv # Simple test cases
+    └── self_driving_tb/ # Advanced testbench
+    ├── tb.sv # Self-checking testbench
+    ├── c.bat # Simulation script
+    └── clean.bat # Cleanup script
 
 ## Module Interface
 
